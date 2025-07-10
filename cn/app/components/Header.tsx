@@ -1,13 +1,15 @@
 'use client';
 
 import Link from 'next/link';
-import { useState, useRef, useEffect } from 'react';
+import { usePathname } from 'next/navigation';
+import { useEffect, useRef, useState } from 'react';
 
 export default function Header() {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const dropdownRef = useRef<HTMLDivElement>(null);
   const timeoutRef = useRef<NodeJS.Timeout | null>(null);
+  const pathname = usePathname();
 
   // 处理鼠标进入事件
   const handleMouseEnter = () => {
@@ -34,6 +36,16 @@ export default function Header() {
   // 关闭移动端菜单（当点击链接时）
   const closeMobileMenu = () => {
     setIsMobileMenuOpen(false);
+  };
+
+  // 处理语言切换，保持当前路径
+  const handleLanguageChange = (domain: string) => {
+    // 提取当前路径部分（排除域名）
+    const currentPath = pathname;
+    // 构建新的URL，替换域名部分但保持路径不变
+    const newUrl = `https://${domain}${currentPath}`;
+    // 跳转到新URL
+    window.location.href = newUrl;
   };
 
   // 点击外部关闭下拉菜单
@@ -118,12 +130,7 @@ export default function Header() {
             {isDropdownOpen && (
               <div className="absolute right-0 mt-2 w-56 origin-top-right rounded-lg bg-white p-1 shadow-lg focus:outline-none">
                 <button
-                  onClick={() => {
-                    // 获取当前路径
-                    const currentPath = window.location.pathname + window.location.search;
-                    // 跳转到英文网站，保持相同的路径
-                    window.location.href = `https://cursorhistory.com${currentPath}`;
-                  }}
+                  onClick={() => handleLanguageChange('cursorhistory.com')}
                   className="flex w-full items-center space-x-3 rounded-md px-4 py-2.5 text-sm font-medium text-gray-700 transition-colors hover:bg-gray-50 cursor-pointer"
                 >
                   <svg className="h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
@@ -131,6 +138,16 @@ export default function Header() {
                     <path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
                   </svg>
                   <span>English</span>
+                </button>
+                <button
+                  onClick={() => handleLanguageChange('es.cursorhistory.com')}
+                  className="flex w-full items-center space-x-3 rounded-md px-4 py-2.5 text-sm font-medium text-gray-700 transition-colors hover:bg-gray-50 cursor-pointer"
+                >
+                  <svg className="h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                    <path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z"></path>
+                    <path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+                  </svg>
+                  <span>Español</span>
                 </button>
                 <a
                   href="#"
@@ -204,12 +221,7 @@ export default function Header() {
               </div>
               <div className="mt-2 space-y-2">
                 <button
-                  onClick={() => {
-                    // 获取当前路径
-                    const currentPath = window.location.pathname + window.location.search;
-                    // 跳转到英文网站，保持相同的路径
-                    window.location.href = `https://cursorhistory.com${currentPath}`;
-                  }}
+                  onClick={() => handleLanguageChange('cursorhistory.com')}
                   className="flex w-full items-center space-x-3 rounded-md px-3 py-2 text-sm font-medium text-gray-700 hover:bg-gray-50"
                 >
                   <svg className="h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
@@ -231,6 +243,16 @@ export default function Header() {
                     <polyline points="20 6 9 17 4 12"></polyline>
                   </svg>
                 </a>
+                <button
+                  onClick={() => handleLanguageChange('es.cursorhistory.com')}
+                  className="flex w-full items-center space-x-3 rounded-md px-3 py-2 text-sm font-medium text-gray-700 hover:bg-gray-50"
+                >
+                  <svg className="h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                    <path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z"></path>
+                    <path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+                  </svg>
+                  <span>Español</span>
+                </button>
               </div>
             </div>
           </div>

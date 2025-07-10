@@ -1,6 +1,7 @@
 'use client';
 
 import Link from 'next/link';
+import { usePathname } from 'next/navigation';
 import { useEffect, useRef, useState } from 'react';
 
 export default function Header() {
@@ -8,6 +9,17 @@ export default function Header() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const dropdownRef = useRef<HTMLDivElement>(null);
   const timeoutRef = useRef<NodeJS.Timeout | null>(null);
+  const pathname = usePathname();
+
+  // Manejar cambio de idioma, manteniendo la ruta actual
+  const handleLanguageChange = (domain: string) => {
+    // Extraer la parte de la ruta actual (excluyendo el dominio)
+    const currentPath = pathname;
+    // Construir nueva URL, reemplazando la parte del dominio pero manteniendo la ruta
+    const newUrl = `https://${domain}${currentPath}`;
+    // Navegar a la nueva URL
+    window.location.href = newUrl;
+  };
 
   // Manejar evento de entrada del mouse
   const handleMouseEnter = () => {
@@ -118,12 +130,7 @@ export default function Header() {
             {isDropdownOpen && (
               <div className="absolute right-0 mt-2 w-56 origin-top-right rounded-lg bg-white p-1 shadow-lg focus:outline-none">
                 <button
-                  onClick={() => {
-                    // Obtener la ruta actual
-                    const currentPath = window.location.pathname + window.location.search;
-                    // Ir al sitio web en inglés, manteniendo la misma ruta
-                    window.location.href = `https://cursorhistory.com${currentPath}`;
-                  }}
+                  onClick={() => handleLanguageChange('cursorhistory.com')}
                   className="flex w-full items-center space-x-3 rounded-md px-4 py-2.5 text-sm font-medium text-gray-700 transition-colors hover:bg-gray-50 cursor-pointer"
                 >
                   <svg className="h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
@@ -133,12 +140,7 @@ export default function Header() {
                   <span>English</span>
                 </button>
                 <button
-                  onClick={() => {
-                    // Obtener la ruta actual
-                    const currentPath = window.location.pathname + window.location.search;
-                    // Ir al sitio web en chino, manteniendo la misma ruta
-                    window.location.href = `https://cn.cursorhistory.com${currentPath}`;
-                  }}
+                  onClick={() => handleLanguageChange('cn.cursorhistory.com')}
                   className="flex w-full items-center space-x-3 rounded-md px-4 py-2.5 text-sm font-medium text-gray-700 transition-colors hover:bg-gray-50 cursor-pointer"
                 >
                   <svg className="h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
@@ -213,6 +215,46 @@ export default function Header() {
               </svg>
               GitHub
             </a>
+            <div className="py-2 border-t border-gray-100 mt-2">
+              <div className="flex items-center justify-between">
+                <span className="text-sm font-medium text-gray-500">Idioma</span>
+              </div>
+              <div className="mt-2 space-y-2">
+                <button
+                  onClick={() => handleLanguageChange('cursorhistory.com')}
+                  className="flex w-full items-center space-x-3 rounded-md px-3 py-2 text-sm font-medium text-gray-700 hover:bg-gray-50"
+                >
+                  <svg className="h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                    <path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z"></path>
+                    <path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+                  </svg>
+                  <span>English</span>
+                </button>
+                <button
+                  onClick={() => handleLanguageChange('cn.cursorhistory.com')}
+                  className="flex w-full items-center space-x-3 rounded-md px-3 py-2 text-sm font-medium text-gray-700 hover:bg-gray-50"
+                >
+                  <svg className="h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                    <path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z"></path>
+                    <path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+                  </svg>
+                  <span>中文 (Chinese)</span>
+                </button>
+                <a
+                  href="#"
+                  className="flex items-center space-x-3 rounded-md bg-blue-50 px-3 py-2 text-sm font-medium text-blue-600"
+                >
+                  <svg className="h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                    <path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z"></path>
+                    <path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+                  </svg>
+                  <span>Español</span>
+                  <svg className="ml-auto h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                    <polyline points="20 6 9 17 4 12"></polyline>
+                  </svg>
+                </a>
+              </div>
+            </div>
           </div>
         </div>
       )}
