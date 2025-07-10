@@ -17,7 +17,7 @@ export async function GET() {
 		const versions = await getAllVersions()
 		console.log(`获取到 ${versions.length} 个版本`)
 
-		const domain = 'https://cursorhistory.com'
+		const domain = 'https://cn.cursorhistory.com'
 
 		// 生成基础URL
 		let urlEntries = [

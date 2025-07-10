@@ -3,7 +3,7 @@ import { Platform } from '@/lib/types'
 export const siteConfig = {
 	name: 'Cursor historical version download',
 	description: 'Download Cursor historical version official website',
-	url: 'https://cursorhistory.com/',
+	url: 'https://ja.cursorhistory.com/',
 	ogImage: 'https://cursor-history.vercel.app/og.jpg',
 	creator: 'Cursor historical version download'
 }
