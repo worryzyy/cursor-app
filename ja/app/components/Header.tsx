@@ -71,7 +71,7 @@ export default function Header() {
         <div className="flex items-center">
           <Link href="/" className="flex items-center space-x-2">
             <span className="text-base md:text-2xl font-bold text-blue-600">Cursor</span>
-            <span className=" sm:inline text-base md:text-base font-medium text-gray-600 hover:text-blue-600">历史版本</span>
+            <span className=" sm:inline text-base md:text-base font-medium text-gray-600 hover:text-blue-600">履歴バージョン</span>
           </Link>
         </div>
 
@@ -81,13 +81,13 @@ export default function Header() {
             href="/"
             className="text-base lg:text-base font-medium text-gray-600 transition-colors hover:text-blue-600"
           >
-            首页
+            ホーム
           </Link>
           <Link
             href="/versions"
             className="text-base lg:text-base font-medium text-gray-600 transition-colors hover:text-blue-600"
           >
-            历史版本
+            履歴バージョン
           </Link>
              <a
             href="https://github.com/worryzyy/cursor-ver-dl"
@@ -214,14 +214,14 @@ export default function Header() {
               className="block py-2 text-base font-medium text-gray-600 hover:text-blue-600"
               onClick={closeMobileMenu}
             >
-              首页
+              ホーム
             </Link>
             <Link
               href="/versions"
               className="block py-2 text-base font-medium text-gray-600 hover:text-blue-600"
               onClick={closeMobileMenu}
             >
-              历史版本
+              履歴バージョン
             </Link>
              <a
               href="https://github.com/worryzyy/cursor-ver-dl"
@@ -237,7 +237,7 @@ export default function Header() {
             </a>
             <div className="py-2 border-t border-gray-100 mt-2">
               <div className="flex items-center justify-between">
-                <span className="text-sm font-medium text-gray-500">语言</span>
+                <span className="text-sm font-medium text-gray-500">言語</span>
               </div>
               <div className="mt-2 space-y-2">
                 <button

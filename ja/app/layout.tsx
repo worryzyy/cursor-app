@@ -11,20 +11,20 @@ const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
   title: {
-    default: 'Cursor 历史版本下载',
-    template: '%s | Cursor 历史版本下载'
+    default: 'Cursor 履歴バージョンダウンロード',
+    template: '%s | Cursor 履歴バージョンダウンロード'
   },
-  description: 'Cursor 历史版本下载，下载Cursor最新版本，一款基于AI的智能编程工具，支持Windows、macOS和Linux平台',
-  keywords: ['Cursor', 'Cursor 历史版本下载', '编程工具', 'AI编程', '代码编辑器', '开发工具'],
+  description: 'Cursor 履歴バージョンダウンロード、Cursorの最新バージョンをダウンロード、AIベースのスマートプログラミングツール、Windows、macOSおよびLinuxプラットフォーム対応',
+  keywords: ['Cursor', 'Cursor 履歴バージョンダウンロード', 'プログラミングツール', 'AIプログラミング', 'コードエディター', '開発ツール'],
   authors: [{ name: 'Cursor' }],
   creator: 'Cursor',
   publisher: 'Cursor',
   openGraph: {
-    title: 'Cursor  历史版本下载',
-    description: '下载Cursor最新版本，一款基于AI的智能编程工具，支持Windows、macOS和Linux平台',
+    title: 'Cursor 履歴バージョンダウンロード',
+    description: 'Cursorの最新バージョンをダウンロード、AIベースのスマートプログラミングツール、Windows、macOSおよびLinuxプラットフォーム対応',
     url: 'https://cursorhistory.com',
-    siteName: 'Cursor 历史版本下载',
-    locale: 'zh_CN',
+    siteName: 'Cursor 履歴バージョンダウンロード',
+    locale: 'ja_JP',
     type: 'website',
   },
   robots: {
@@ -52,7 +52,7 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="zh-CN">
+    <html lang="ja">
       <head>
         {/* Google AdSense 验证元标签 */}
         <meta name="google-adsense-account" content="ca-pub-4633597437741439" />
@@ -99,8 +99,8 @@ export default function RootLayout({
                     <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"></path>
                   </svg>
                 </div>
-                <h3 className="text-sm font-bold text-gray-800 mb-1">广告位招租</h3>
-                <p className="text-xs text-blue-600 font-medium">黄金位置</p>
+                <h3 className="text-sm font-bold text-gray-800 mb-1">広告スペース募集中</h3>
+                <p className="text-xs text-blue-600 font-medium">プレミアムポジション</p>
               </div>
               <div className="mb-4">
                 <a
@@ -111,7 +111,7 @@ export default function RootLayout({
                 </a>
               </div>
               <p className="text-xs text-gray-600 leading-tight font-medium">
-                商务合作·广告投放
+                ビジネスコラボレーション・広告掲載
               </p>
             </div>
           </div>

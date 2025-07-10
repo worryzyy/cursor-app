@@ -24,13 +24,13 @@ async function VersionsList() {
     <>
       {latestVersion && (
         <div className="mb-8">
-          <h2 className="text-2xl font-bold mb-4">最新版本</h2>
+          <h2 className="text-2xl font-bold mb-4">最新バージョン</h2>
           <VersionCard version={latestVersion} />
         </div>
       )}
 
       <div>
-        <h2 className="text-2xl font-bold mb-4">所有版本</h2>
+        <h2 className="text-2xl font-bold mb-4">すべてのバージョン</h2>
         <VersionsTable versions={versions} />
       </div>
     </>
@@ -42,13 +42,13 @@ export default function Home() {
     <main className="container mx-auto px-4 py-8">
       <Hero />
       <section className="mt-8 mb-8">
-        <h2 className="text-2xl font-bold mb-4">关于 Cursor</h2>
+        <h2 className="text-2xl font-bold mb-4">Cursor について</h2>
         <div className="bg-white p-6 rounded-lg shadow-md">
           <p className="mb-4">
-            Cursor 是一款基于 VSCode 的 AI 优先代码编辑器。它旨在帮助开发人员借助 AI 更快地编写、理解和改进代码。此网站提供对 Windows、macOS 和 Linux 平台的 Cursor 所有历史版本的访问。
+            Cursor は VSCode ベースの AI ファーストコードエディターです。開発者が AI の助けを借りて、より速くコードを書き、理解し、改善できるように設計されています。このウェブサイトでは、Windows、macOS、Linux プラットフォーム向けの Cursor の全ての履歴バージョンにアクセスできます。
           </p>
           <p>
-            无论您是在寻找最新功能还是出于兼容性原因需要特定版本，您都可以从我们下面全面的集合中找到并下载所需的内容。
+            最新機能をお探しの場合でも、互換性の理由で特定のバージョンが必要な場合でも、以下の包括的なコレクションから必要なものを見つけてダウンロードできます。
           </p>
         </div>
       </section>
