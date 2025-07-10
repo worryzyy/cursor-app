@@ -1,4 +1,4 @@
-name: 抓取Cursor最新版本 (ES)
+name: Update Cursor Versions (ES)
 
 on:
   schedule:
@@ -13,7 +13,7 @@ permissions:
 
 jobs:
   fetch-cursor-version-es:
-    name: 抓取Cursor最新版本 (ES)
+    name: Update Cursor Versions (ES)
     runs-on: ubuntu-latest
 
     steps:
