@@ -27,12 +27,15 @@ jobs:
         with:
           node-version: "18"
           cache: "npm"
+          cache-dependency-path: "./cn/package-lock.json"
 
       - name: 安装依赖
         run: npm install
+        working-directory: ./cn
 
       - name: 运行更新脚本
         run: npm run update-cursor-versions
+        working-directory: ./cn
 
       - name: Commit and push if changed
         run: |
