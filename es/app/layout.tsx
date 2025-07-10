@@ -1,30 +1,30 @@
-import { Metadata } from 'next'
-import { Inter } from 'next/font/google'
-import './globals.css'
+import { Metadata } from 'next';
+import { Inter } from 'next/font/google';
 import Header from "./components/Header";
+import './globals.css';
 // import { FloatingAdsContainer } from './components/Advertisements'
 // import { AAdsAdvertisement } from './components/Advertisements'
+import Script from 'next/script';
 import { siteConfig } from "../config/site";
-import Script from 'next/script'
 
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
   title: {
-    default: 'Cursor 历史版本下载',
-    template: '%s | Cursor 历史版本下载'
+    default: 'Descarga de versiones históricas de Cursor',
+    template: '%s | Descarga de versiones históricas de Cursor'
   },
-  description: 'Cursor 历史版本下载，下载Cursor最新版本，一款基于AI的智能编程工具，支持Windows、macOS和Linux平台',
-  keywords: ['Cursor', 'Cursor 历史版本下载', '编程工具', 'AI编程', '代码编辑器', '开发工具'],
+  description: 'Descarga de versiones históricas de Cursor, descarga la última versión de Cursor, una herramienta de programación inteligente basada en IA, compatible con plataformas Windows, macOS y Linux',
+  keywords: ['Cursor', 'Descarga de versiones históricas de Cursor', 'herramientas de programación', 'programación con IA', 'editor de código', 'herramientas de desarrollo'],
   authors: [{ name: 'Cursor' }],
   creator: 'Cursor',
   publisher: 'Cursor',
   openGraph: {
-    title: 'Cursor  历史版本下载',
-    description: '下载Cursor最新版本，一款基于AI的智能编程工具，支持Windows、macOS和Linux平台',
+    title: 'Descarga de versiones históricas de Cursor',
+    description: 'Descarga la última versión de Cursor, una herramienta de programación inteligente basada en IA, compatible con plataformas Windows, macOS y Linux',
     url: 'https://cursorhistory.com',
-    siteName: 'Cursor 历史版本下载',
-    locale: 'zh_CN',
+    siteName: 'Descarga de versiones históricas de Cursor',
+    locale: 'es_ES',
     type: 'website',
   },
   robots: {
@@ -52,13 +52,13 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="zh-CN">
+    <html lang="es">
       <head>
-        {/* Google AdSense 验证元标签 */}
+        {/* Etiqueta meta de verificación de Google AdSense */}
         <meta name="google-adsense-account" content="ca-pub-4633597437741439" />
 
 
-        {/* 现有的 AdSense 脚本 */}
+        {/* Script de AdSense existente */}
         <Script
           async
           src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4633597437741439"
@@ -80,7 +80,7 @@ export default function RootLayout({
         </Script>
       </head>
       <body className={inter.className}>
-        {/* 悬浮广告容器 */}
+        {/* Contenedor de anuncios flotantes */}
         {/* <FloatingAdsContainer /> */}
         <div className="flex min-h-screen flex-col">
           <Header />
@@ -99,8 +99,8 @@ export default function RootLayout({
                     <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"></path>
                   </svg>
                 </div>
-                <h3 className="text-sm font-bold text-gray-800 mb-1">广告位招租</h3>
-                <p className="text-xs text-blue-600 font-medium">黄金位置</p>
+                <h3 className="text-sm font-bold text-gray-800 mb-1">Espacio publicitario disponible</h3>
+                <p className="text-xs text-blue-600 font-medium">Ubicación premium</p>
               </div>
               <div className="mb-4">
                 <a
@@ -111,7 +111,7 @@ export default function RootLayout({
                 </a>
               </div>
               <p className="text-xs text-gray-600 leading-tight font-medium">
-                商务合作·广告投放
+                Cooperación comercial · Publicidad
               </p>
             </div>
           </div>

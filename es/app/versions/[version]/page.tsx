@@ -1,11 +1,11 @@
-import { Suspense } from 'react'
-import Link from 'next/link'
-import { notFound } from 'next/navigation'
-import { getVersionByNumber, getAllVersions } from '@/lib/versions'
 import { platformLabels } from '@/config/site'
 import { Platform, PlatformFile } from '@/lib/types'
-import { Skeleton } from '../../components/ui/skeleton'
+import { getAllVersions, getVersionByNumber } from '@/lib/versions'
 import { Metadata } from 'next'
+import Link from 'next/link'
+import { notFound } from 'next/navigation'
+import { Suspense } from 'react'
+import { Skeleton } from '../../components/ui/skeleton'
 
 import Image from 'next/image'
 
@@ -15,7 +15,7 @@ interface VersionDetailPageProps {
   }
 }
 
-// 版本详情加载组件
+// Componente de carga de detalles de versión
 function VersionDetailLoading() {
   return (
     <div className="space-y-4">
@@ -25,7 +25,7 @@ function VersionDetailLoading() {
   )
 }
 
-// 异步获取版本详情的组件
+// Componente para obtener detalles de versión de forma asíncrona
 async function VersionDetail({ version }: { version: string }) {
   const versionData = await getVersionByNumber(version)
 
@@ -33,14 +33,14 @@ async function VersionDetail({ version }: { version: string }) {
     notFound()
   }
 
-  // 按主要平台分组
+  // Agrupar por plataformas principales
   const platformGroups = {
     windows: [] as [string, Platform, PlatformFile][],
     mac: [] as [string, Platform, PlatformFile][],
     linux: [] as [string, Platform, PlatformFile][]
   };
 
-  // 对平台进行分组
+  // Agrupar plataformas
   Object.entries(versionData.platforms).forEach(([platform, file]) => {
     const typedPlatform = platform as Platform;
     if (typedPlatform.startsWith('windows')) {
@@ -61,7 +61,7 @@ async function VersionDetail({ version }: { version: string }) {
       </div>
 
       <div className="mb-8 grid grid-cols-1 gap-6 md:grid-cols-3">
-        {/* Windows 平台 */}
+        {/* Plataforma Windows */}
         {platformGroups.windows.length > 0 && (
           <div className="overflow-hidden rounded-lg border border-gray-200 bg-white shadow-sm transition-all duration-200 hover:border-indigo-200 hover:shadow-md">
             <div className="border-b border-gray-200 bg-gradient-to-r from-indigo-50 to-purple-50 px-4 py-3">
@@ -77,7 +77,7 @@ async function VersionDetail({ version }: { version: string }) {
                     {/* <h4 className="mb-2 font-medium text-gray-800">{label}</h4> */}
                     <div className="mb-3 space-y-2">
                       <div className="flex items-start">
-                        <span className="mr-2 text-sm font-medium text-gray-700">校验和:</span>
+                        <span className="mr-2 text-sm font-medium text-gray-700">Suma de verificación:</span>
                         <code className="break-all rounded bg-gray-100 px-2 py-1 text-xs text-gray-800">
                           {file.checksum}
                         </code>
@@ -91,7 +91,7 @@ async function VersionDetail({ version }: { version: string }) {
                       <svg xmlns="http://www.w3.org/2000/svg" className="mr-1 h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
                       </svg>
-                      下载
+                      Descargar
                     </a>
 
                   </div>
@@ -101,7 +101,7 @@ async function VersionDetail({ version }: { version: string }) {
           </div>
         )}
 
-        {/* macOS 平台 */}
+        {/* Plataforma macOS */}
         {platformGroups.mac.length > 0 && (
           <div className="overflow-hidden rounded-lg border border-gray-200 bg-white shadow-sm transition-all duration-200 hover:border-indigo-200 hover:shadow-md">
             <div className="border-b border-gray-200 bg-gradient-to-r from-indigo-50 to-purple-50 px-4 py-3">
@@ -116,7 +116,7 @@ async function VersionDetail({ version }: { version: string }) {
                     <h4 className="mb-2 font-medium text-gray-800">{label.replace('macOS ', '')}</h4>
                     <div className="mb-3 space-y-2">
                       <div className="flex items-start">
-                        <span className="mr-2 text-sm font-medium text-gray-700">校验和:</span>
+                        <span className="mr-2 text-sm font-medium text-gray-700">Suma de verificación:</span>
                         <code className="break-all rounded bg-gray-100 px-2 py-1 text-xs text-gray-800">
                           {file.checksum}
                         </code>
@@ -131,7 +131,7 @@ async function VersionDetail({ version }: { version: string }) {
                       <svg xmlns="http://www.w3.org/2000/svg" className="mr-1 h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
                       </svg>
-                      下载
+                      Descargar
                     </a>
                   </div>
                 ))}
@@ -140,7 +140,7 @@ async function VersionDetail({ version }: { version: string }) {
           </div>
         )}
 
-        {/* Linux 平台 */}
+        {/* Plataforma Linux */}
         {platformGroups.linux.length > 0 && (
           <div className="overflow-hidden rounded-lg border border-gray-200 bg-white shadow-sm transition-all duration-200 hover:border-indigo-200 hover:shadow-md">
             <div className="border-b border-gray-200 bg-gradient-to-r from-indigo-50 to-purple-50 px-4 py-3">
@@ -155,7 +155,7 @@ async function VersionDetail({ version }: { version: string }) {
                     <h4 className="mb-2 font-medium text-gray-800">{label.replace('Linux ', '')}</h4>
                     <div className="mb-3 space-y-2">
                       <div className="flex items-start">
-                        <span className="mr-2 text-sm font-medium text-gray-700">校验和:</span>
+                        <span className="mr-2 text-sm font-medium text-gray-700">Suma de verificación:</span>
                         <code className="break-all rounded bg-gray-100 px-2 py-1 text-xs text-gray-800">
                           {file.checksum}
                         </code>
@@ -169,7 +169,7 @@ async function VersionDetail({ version }: { version: string }) {
                       <svg xmlns="http://www.w3.org/2000/svg" className="mr-1 h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
                       </svg>
-                      下载
+                      Descargar
                     </a>
                   </div>
                 ))}
@@ -184,37 +184,35 @@ async function VersionDetail({ version }: { version: string }) {
           href="/versions"
           className="inline-flex items-center text-indigo-600 hover:text-purple-600"
         >
-          &larr; 返回所有版本
+          &larr; Volver a todas las versiones
         </Link>
       </div>
     </div>
   )
 }
 
-// 生成动态元数据
+// Generar metadatos dinámicos
 export async function generateMetadata({ params }: { params: { version: string } }): Promise<Metadata> {
   const version = await getVersionByNumber(params.version)
 
   if (!version) {
     return {
-      title: '版本不存在',
-      description: '请查看其他可用的Cursor版本',
+      title: 'Versión no encontrada',
+      description: 'Por favor, consulte otras versiones disponibles de Cursor',
     }
   }
 
   return {
-    title: `Cursor ${version.version}${version.isLatest ? ' (最新版)' : ''}`,
-    description: `下载Cursor ${version.version} - 支持Windows、macOS和Linux平台的智能编程工具`,
-    keywords: ['Cursor', version.version, 'Cursor 历史版本下载', '编程工具', 'AI编辑器'],
-    alternates: {
-      canonical: `https://cn.cursorhistory.com/versions/${version.version}`,
-    },
+    title: `Cursor ${version.version}${version.isLatest ? ' (Más reciente)' : ''}`,
+    description: `Descargar Cursor ${version.version} - Herramienta de programación inteligente compatible con plataformas Windows, macOS y Linux`,
+    keywords: ['Cursor', version.version, 'Descarga de versiones históricas de Cursor', 'herramientas de programación', 'editor con IA'],
   }
 }
 
-// 生成静态路径
+// Generar rutas estáticas
 export async function generateStaticParams() {
   const versions = await getAllVersions()
+  
   return versions.map((version) => ({
     version: version.version,
   }))
@@ -226,12 +224,10 @@ export default function VersionDetailPage({ params }: VersionDetailPageProps) {
   return (
     <main className="container mx-auto px-4 py-8">
       <div className="mb-8">
-        <div className="bg-white p-6 rounded-lg shadow-md mb-6">
-          <h2 className="text-2xl font-bold mb-4">版本详情</h2>
-          <p>
-            本页提供有关 Cursor 版本 {version} 的详细信息。您可以在下面找到适用于各种操作系统和架构的下载链接。每个下载均包含适用于您系统的适当安装程序包。
-          </p>
-        </div>
+        <h2 className="text-2xl font-bold mb-4">Detalles de la versión</h2>
+        <p>
+          Esta página proporciona información detallada sobre la versión {version} de Cursor. Puede encontrar enlaces de descarga para varios sistemas operativos y arquitecturas a continuación. Cada descarga incluye el paquete de instalación apropiado para su sistema.
+        </p>
       </div>
       <Suspense fallback={<VersionDetailLoading />}>
         <VersionDetail version={version} />

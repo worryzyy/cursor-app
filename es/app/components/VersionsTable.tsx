@@ -1,5 +1,5 @@
-import Link from 'next/link'
 import { Version } from '@/lib/types'
+import Link from 'next/link'
 
 interface VersionsTableProps {
   versions: Version[]
@@ -8,24 +8,24 @@ interface VersionsTableProps {
 export function VersionsTable({ versions }: VersionsTableProps) {
   return (
     <div className="overflow-x-auto rounded-lg border border-gray-200">
-      <table className="min-w-full divide-y divide-gray-200" aria-label="Cursor版本列表">
-        <caption className="sr-only">Cursor软件版本列表 - 包含版本号、支持平台和操作选项</caption>
+      <table className="min-w-full divide-y divide-gray-200" aria-label="Lista de versiones de Cursor">
+        <caption className="sr-only">Lista de versiones del software Cursor - incluye número de versión, plataformas compatibles y opciones de operación</caption>
         <thead className="bg-gray-50">
           <tr>
             <th scope="col" className="px-6 py-3 text-left text-xs font-medium uppercase tracking-wider text-gray-500">
-              版本
+              Versión
             </th>
             <th scope="col" className="px-6 py-3 text-left text-xs font-medium uppercase tracking-wider text-gray-500">
-              发布日期
+              Fecha de lanzamiento
             </th>
             <th scope="col" className="px-6 py-3 text-left text-xs font-medium uppercase tracking-wider text-gray-500">
-              平台
+              Plataforma
             </th>
             <th scope="col" className="px-6 py-3 text-left text-xs font-medium uppercase tracking-wider text-gray-500">
-              更新内容
+              Contenido de actualización
             </th>
             <th scope="col" className="px-6 py-3 text-left text-xs font-medium uppercase tracking-wider text-gray-500">
-              操作
+              Acciones
             </th>
           </tr>
         </thead>
@@ -36,13 +36,13 @@ export function VersionsTable({ versions }: VersionsTableProps) {
                 <Link prefetch={false} 
                   href={`/versions/${version.version}`} 
                   className="font-medium text-blue-600 hover:text-blue-800"
-                  title={`查看Cursor ${version.version}版本详情`}
+                  title={`Ver detalles de la versión ${version.version} de Cursor`}
                 >
                   {version.version}
                 </Link>
                 {version.isLatest && (
                   <span className="ml-2 rounded-full bg-green-100 px-2 py-0.5 text-xs font-medium text-green-800">
-                    最新
+                    Más reciente
                   </span>
                 )}
               </td>
@@ -64,9 +64,9 @@ export function VersionsTable({ versions }: VersionsTableProps) {
                 <Link prefetch={false}
                   href={`/versions/${version.version}`}
                   className="font-medium text-blue-600 hover:text-blue-800"
-                  aria-label={`查看Cursor ${version.version}版本的详细信息`}
+                  aria-label={`Ver información detallada de la versión ${version.version} de Cursor`}
                 >
-                  查看详情
+                  Ver detalles
                 </Link>
               </td>
             </tr>

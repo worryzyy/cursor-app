@@ -1,7 +1,7 @@
 'use client';
 
 import Link from 'next/link';
-import { useState, useRef, useEffect } from 'react';
+import { useEffect, useRef, useState } from 'react';
 
 export default function Header() {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
@@ -9,7 +9,7 @@ export default function Header() {
   const dropdownRef = useRef<HTMLDivElement>(null);
   const timeoutRef = useRef<NodeJS.Timeout | null>(null);
 
-  // 处理鼠标进入事件
+  // Manejar evento de entrada del mouse
   const handleMouseEnter = () => {
     if (timeoutRef.current) {
       clearTimeout(timeoutRef.current);
@@ -18,25 +18,25 @@ export default function Header() {
     setIsDropdownOpen(true);
   };
 
-  // 处理鼠标离开事件
+  // Manejar evento de salida del mouse
   const handleMouseLeave = () => {
-    // 添加小延迟，避免鼠标在菜单项之间移动时菜单闪烁关闭
+    // Agregar pequeño retraso para evitar parpadeo del menú al mover el mouse entre elementos
     timeoutRef.current = setTimeout(() => {
       setIsDropdownOpen(false);
     }, 150);
   };
 
-  // 切换移动端菜单
+  // Alternar menú móvil
   const toggleMobileMenu = () => {
     setIsMobileMenuOpen(!isMobileMenuOpen);
   };
 
-  // 关闭移动端菜单（当点击链接时）
+  // Cerrar menú móvil (cuando se hace clic en un enlace)
   const closeMobileMenu = () => {
     setIsMobileMenuOpen(false);
   };
 
-  // 点击外部关闭下拉菜单
+  // Hacer clic fuera para cerrar el menú desplegable
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
       if (dropdownRef.current && !dropdownRef.current.contains(event.target as Node)) {
@@ -59,23 +59,23 @@ export default function Header() {
         <div className="flex items-center">
           <Link href="/" className="flex items-center space-x-2">
             <span className="text-base md:text-2xl font-bold text-blue-600">Cursor</span>
-            <span className=" sm:inline text-base md:text-base font-medium text-gray-600 hover:text-blue-600">历史版本</span>
+            <span className=" sm:inline text-base md:text-base font-medium text-gray-600 hover:text-blue-600">Versiones históricas</span>
           </Link>
         </div>
 
-        {/* 桌面导航 - 在中等屏幕及以上显示 */}
+        {/* Navegación de escritorio - mostrar en pantallas medianas y superiores */}
         <nav className="hidden md:flex items-center space-x-6">
           <Link
             href="/"
             className="text-base lg:text-base font-medium text-gray-600 transition-colors hover:text-blue-600"
           >
-            首页
+            Inicio
           </Link>
           <Link
             href="/versions"
             className="text-base lg:text-base font-medium text-gray-600 transition-colors hover:text-blue-600"
           >
-            历史版本
+            Versiones históricas
           </Link>
              <a
             href="https://github.com/worryzyy/cursor-ver-dl"
@@ -103,7 +103,7 @@ export default function Header() {
                 <circle cx="12" cy="12" r="10"></circle>
                 <path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
               </svg>
-              <span>中文 (Chinese)</span>
+              <span>Español</span>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 className={`h-4 w-4 text-gray-500 transition-transform duration-200 ${isDropdownOpen ? 'rotate-180' : ''}`}
@@ -119,9 +119,9 @@ export default function Header() {
               <div className="absolute right-0 mt-2 w-56 origin-top-right rounded-lg bg-white p-1 shadow-lg focus:outline-none">
                 <button
                   onClick={() => {
-                    // 获取当前路径
+                    // Obtener la ruta actual
                     const currentPath = window.location.pathname + window.location.search;
-                    // 跳转到英文网站，保持相同的路径
+                    // Ir al sitio web en inglés, manteniendo la misma ruta
                     window.location.href = `https://cursorhistory.com${currentPath}`;
                   }}
                   className="flex w-full items-center space-x-3 rounded-md px-4 py-2.5 text-sm font-medium text-gray-700 transition-colors hover:bg-gray-50 cursor-pointer"
@@ -132,6 +132,21 @@ export default function Header() {
                   </svg>
                   <span>English</span>
                 </button>
+                <button
+                  onClick={() => {
+                    // Obtener la ruta actual
+                    const currentPath = window.location.pathname + window.location.search;
+                    // Ir al sitio web en chino, manteniendo la misma ruta
+                    window.location.href = `https://cn.cursorhistory.com${currentPath}`;
+                  }}
+                  className="flex w-full items-center space-x-3 rounded-md px-4 py-2.5 text-sm font-medium text-gray-700 transition-colors hover:bg-gray-50 cursor-pointer"
+                >
+                  <svg className="h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                    <path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z"></path>
+                    <path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+                  </svg>
+                  <span>中文 (Chinese)</span>
+                </button>
                 <a
                   href="#"
                   className="flex items-center space-x-3 rounded-md bg-blue-50 px-4 py-2.5 text-sm font-medium text-blue-600 cursor-pointer"
@@ -140,7 +155,7 @@ export default function Header() {
                     <path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z"></path>
                     <path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
                   </svg>
-                  <span>中文 (Chinese)</span>
+                  <span>Español</span>
                   <svg className="ml-auto h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                     <polyline points="20 6 9 17 4 12"></polyline>
                   </svg>
@@ -150,7 +165,7 @@ export default function Header() {
           </div>
         </nav>
 
-        {/* 移动端菜单按钮 - 仅在小屏幕显示 */}
+        {/* Botón de menú móvil - solo mostrar en pantallas pequeñas */}
         <button
           className="md:hidden p-2 rounded-md text-gray-600 hover:text-blue-600 hover:bg-gray-100 focus:outline-none"
           onClick={toggleMobileMenu}
@@ -168,7 +183,7 @@ export default function Header() {
         </button>
       </div>
 
-      {/* 移动端菜单 - 仅在小屏幕显示且菜单打开时 */}
+      {/* Menú móvil - solo mostrar en pantallas pequeñas cuando el menú esté abierto */}
       {isMobileMenuOpen && (
         <div className="md:hidden bg-white border-t border-gray-200 py-2">
           <div className="container mx-auto px-4 space-y-2">
@@ -177,14 +192,14 @@ export default function Header() {
               className="block py-2 text-base font-medium text-gray-600 hover:text-blue-600"
               onClick={closeMobileMenu}
             >
-              首页
+              Inicio
             </Link>
             <Link
               href="/versions"
               className="block py-2 text-base font-medium text-gray-600 hover:text-blue-600"
               onClick={closeMobileMenu}
             >
-              历史版本
+              Versiones históricas
             </Link>
              <a
               href="https://github.com/worryzyy/cursor-ver-dl"
@@ -198,44 +213,9 @@ export default function Header() {
               </svg>
               GitHub
             </a>
-            <div className="py-2 border-t border-gray-100 mt-2">
-              <div className="flex items-center justify-between">
-                <span className="text-sm font-medium text-gray-500">语言</span>
-              </div>
-              <div className="mt-2 space-y-2">
-                <button
-                  onClick={() => {
-                    // 获取当前路径
-                    const currentPath = window.location.pathname + window.location.search;
-                    // 跳转到英文网站，保持相同的路径
-                    window.location.href = `https://cursorhistory.com${currentPath}`;
-                  }}
-                  className="flex w-full items-center space-x-3 rounded-md px-3 py-2 text-sm font-medium text-gray-700 hover:bg-gray-50"
-                >
-                  <svg className="h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                    <path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z"></path>
-                    <path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
-                  </svg>
-                  <span>English</span>
-                </button>
-                <a
-                  href="#"
-                  className="flex items-center space-x-3 rounded-md bg-blue-50 px-3 py-2 text-sm font-medium text-blue-600"
-                >
-                  <svg className="h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                    <path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z"></path>
-                    <path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
-                  </svg>
-                  <span>中文 (Chinese)</span>
-                  <svg className="ml-auto h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                    <polyline points="20 6 9 17 4 12"></polyline>
-                  </svg>
-                </a>
-              </div>
-            </div>
           </div>
         </div>
       )}
     </header>
-  );
+  )
 } 

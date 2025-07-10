@@ -1,9 +1,9 @@
 'use client';
 
-import Link from 'next/link';
-import Image from 'next/image';
-import { Version, Platform } from '@/lib/types';
 import { platformLabels } from '@/config/site';
+import { Platform, Version } from '@/lib/types';
+import Image from 'next/image';
+import Link from 'next/link';
 
 interface VersionCardProps {
   version: Version;
@@ -11,14 +11,14 @@ interface VersionCardProps {
 }
 
 export function VersionCard({ version, isCompact = false }: VersionCardProps) {
-  // 按主要平台分组
+  // Agrupar por plataformas principales
   const platformGroups = {
     windows: [] as [string, Platform][],
     mac: [] as [string, Platform][],
     linux: [] as [string, Platform][]
   };
 
-  // 对平台进行分组
+  // Agrupar plataformas
   Object.entries(version.platforms).forEach(([platform]) => {
     const typedPlatform = platform as Platform;
     if (typedPlatform.startsWith('windows')) {
@@ -30,15 +30,15 @@ export function VersionCard({ version, isCompact = false }: VersionCardProps) {
     }
   });
 
-  // 处理下载点击事件
+  // Manejar evento de clic de descarga
   const handleDownload = (e: React.MouseEvent<HTMLButtonElement>, version: Version, platform: string) => {
     e.preventDefault();
     const downloadUrl = version.platforms[platform].url
     if (downloadUrl) {
-      // 创建一个隐藏的a标签并触发点击
+      // Crear un enlace oculto y activar el clic
       const link = document.createElement('a');
       link.href = downloadUrl;
-      link.download = ''; // 让浏览器使用默认文件名
+      link.download = ''; // Dejar que el navegador use el nombre de archivo predeterminado
       link.style.display = 'none';
       document.body.appendChild(link);
       link.click();
@@ -58,7 +58,7 @@ export function VersionCard({ version, isCompact = false }: VersionCardProps) {
 
       <div className="p-4">
         <div className="mb-4 grid grid-cols-1 gap-6 md:grid-cols-3">
-          {/* Windows 平台 */}
+          {/* Plataforma Windows */}
           {platformGroups.windows.length > 0 && (
             <div className="rounded-md border border-gray-200 p-4 transition-all duration-200 hover:border-indigo-200 hover:shadow-sm">
               <h4 className="mb-3 text-xl font-medium text-indigo-900 flex items-center">
@@ -78,7 +78,7 @@ export function VersionCard({ version, isCompact = false }: VersionCardProps) {
                       <svg xmlns="http://www.w3.org/2000/svg" className="mr-1 h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
                       </svg>
-                      下载
+                      Descargar
                     </button>
                   </div>
                 ))}
@@ -86,7 +86,7 @@ export function VersionCard({ version, isCompact = false }: VersionCardProps) {
             </div>
           )}
 
-          {/* macOS 平台 */}
+          {/* Plataforma macOS */}
           {platformGroups.mac.length > 0 && (
             <div className="rounded-md border border-gray-200 p-4 transition-all duration-200 hover:border-indigo-200 hover:shadow-sm">
               <h4 className="mb-3 text-xl font-medium text-indigo-900 flex items-center">
@@ -105,7 +105,7 @@ export function VersionCard({ version, isCompact = false }: VersionCardProps) {
                       <svg xmlns="http://www.w3.org/2000/svg" className="mr-1 h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
                       </svg>
-                      下载
+                      Descargar
                     </button>
                   </div>
                 ))}
@@ -113,7 +113,7 @@ export function VersionCard({ version, isCompact = false }: VersionCardProps) {
             </div>
           )}
 
-          {/* Linux 平台 */}
+          {/* Plataforma Linux */}
           {platformGroups.linux.length > 0 && (
             <div className="rounded-md border border-gray-200 p-4 transition-all duration-200 hover:border-indigo-200 hover:shadow-sm">
               <h4 className="mb-3 text-xl font-medium text-indigo-900 flex items-center">
@@ -132,7 +132,7 @@ export function VersionCard({ version, isCompact = false }: VersionCardProps) {
                       <svg xmlns="http://www.w3.org/2000/svg" className="mr-1 h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
                       </svg>
-                      下载
+                      Descargar
                     </button>
                   </div>
                 ))}
@@ -147,7 +147,7 @@ export function VersionCard({ version, isCompact = false }: VersionCardProps) {
               href={`/versions/${version.version}`}
               className="text-sm font-medium text-indigo-600 hover:text-purple-600"
             >
-              查看详情 &rarr;
+              Ver detalles &rarr;
             </Link>
           </div>
         )}

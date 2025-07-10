@@ -1,11 +1,11 @@
-import { Suspense } from 'react'
 import { getAllVersions, getLatestVersion } from '@/lib/versions'
-import { VersionCard } from './components/VersionCard'
-import { VersionsTable } from './components/VersionsTable'
+import { Suspense } from 'react'
 import { Hero } from './components/Hero'
 import { Skeleton } from './components/ui/skeleton'
+import { VersionCard } from './components/VersionCard'
+import { VersionsTable } from './components/VersionsTable'
 
-// 版本列表加载组件
+// Componente de carga de lista de versiones
 function VersionsLoading() {
   return (
     <div className="space-y-4">
@@ -15,7 +15,7 @@ function VersionsLoading() {
   )
 }
 
-// 异步获取版本数据的组件
+// Componente para obtener datos de versiones de forma asíncrona
 async function VersionsList() {
   const versions = await getAllVersions()
   const latestVersion = await getLatestVersion()
@@ -24,13 +24,13 @@ async function VersionsList() {
     <>
       {latestVersion && (
         <div className="mb-8">
-          <h2 className="text-2xl font-bold mb-4">最新版本</h2>
+          <h2 className="text-2xl font-bold mb-4">Última versión</h2>
           <VersionCard version={latestVersion} />
         </div>
       )}
 
       <div>
-        <h2 className="text-2xl font-bold mb-4">所有版本</h2>
+        <h2 className="text-2xl font-bold mb-4">Todas las versiones</h2>
         <VersionsTable versions={versions} />
       </div>
     </>
@@ -42,13 +42,13 @@ export default function Home() {
     <main className="container mx-auto px-4 py-8">
       <Hero />
       <section className="mt-8 mb-8">
-        <h2 className="text-2xl font-bold mb-4">关于 Cursor</h2>
+        <h2 className="text-2xl font-bold mb-4">Acerca de Cursor</h2>
         <div className="bg-white p-6 rounded-lg shadow-md">
           <p className="mb-4">
-            Cursor 是一款基于 VSCode 的 AI 优先代码编辑器。它旨在帮助开发人员借助 AI 更快地编写、理解和改进代码。此网站提供对 Windows、macOS 和 Linux 平台的 Cursor 所有历史版本的访问。
+            Cursor es un editor de código con IA como prioridad basado en VSCode. Está diseñado para ayudar a los desarrolladores a escribir, entender y mejorar código más rápido con la ayuda de la IA. Este sitio web proporciona acceso a todas las versiones históricas de Cursor para las plataformas Windows, macOS y Linux.
           </p>
           <p>
-            无论您是在寻找最新功能还是出于兼容性原因需要特定版本，您都可以从我们下面全面的集合中找到并下载所需的内容。
+            Ya sea que esté buscando las últimas funciones o necesite una versión específica por razones de compatibilidad, puede encontrar y descargar lo que necesita de nuestra completa colección a continuación.
           </p>
         </div>
       </section>
