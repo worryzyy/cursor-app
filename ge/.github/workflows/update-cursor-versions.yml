@@ -1,0 +1,45 @@
+name: 抓取Cursor最新版本
+
+on:
+  schedule:
+    # 每30分钟运行一次
+    - cron: "*/30 * * * *"
+  workflow_dispatch:
+    # 允许手动触发
+
+# 添加权限配置
+permissions:
+  contents: write
+
+jobs:
+  fetch-cursor-version:
+    name: 抓取Cursor最新版本
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: 检出代码
+        uses: actions/checkout@v3
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: 设置Node.js环境
+        uses: actions/setup-node@v3
+        with:
+          node-version: "18"
+          cache: "npm"
+          cache-dependency-path: "./cn/package-lock.json"
+
+      - name: 安装依赖
+        run: npm install
+        working-directory: ./cn
+
+      - name: 运行更新脚本
+        run: npm run update-cursor-versions
+        working-directory: ./cn
+
+      - name: Commit and push if changed
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git add -A
+          git diff --quiet && git diff --staged --quiet || (git commit -m "chore(downloads): update Cursor version download links [bot]" && git push)

@@ -1,0 +1,1346 @@
+{
+  "0.45.14": {
+    "platforms": {
+      "windows": {
+        "url": "https://downloader.cursor.sh/builds/250219jnihavxsz/windows/nsis/x64",
+        "checksum": "sdmxd33ex8sjpme8nt3p"
+      },
+      "mac": {
+        "url": "https://downloader.cursor.sh/builds/250219jnihavxsz/mac/installer/universal",
+        "checksum": "5wy7zay7fm2vywx0loi8"
+      },
+      "mac_arm64": {
+        "url": "https://downloader.cursor.sh/builds/250219jnihavxsz/mac/installer/arm64",
+        "checksum": "78jpuky44d73iji9v3t0"
+      },
+      "mac_intel": {
+        "url": "https://downloader.cursor.sh/builds/250219jnihavxsz/mac/installer/x64",
+        "checksum": "98p0k1qnk9brd36hngx3"
+      },
+      "linux": {
+        "url": "https://downloader.cursor.sh/builds/250219jnihavxsz/linux/appImage/x64",
+        "checksum": "7x3ejjyw61615n2lck2y"
+      }
+    }
+  },
+  "0.45.12": {
+    "platforms": {
+      "windows": {
+        "url": "https://downloader.cursor.sh/builds/2502180s4ios0dk/windows/nsis/x64",
+        "checksum": "1i576e508b7sr2bgayia"
+      },
+      "mac": {
+        "url": "https://downloader.cursor.sh/builds/2502180s4ios0dk/mac/installer/universal",
+        "checksum": "xr8oirpphchwszsyh5lx"
+      },
+      "mac_arm64": {
+        "url": "https://downloader.cursor.sh/builds/2502180s4ios0dk/mac/installer/arm64",
+        "checksum": "ewd8demradfg083s4083"
+      },
+      "mac_intel": {
+        "url": "https://downloader.cursor.sh/builds/2502180s4ios0dk/mac/installer/x64",
+        "checksum": "uj7wanbsscnx36j4lwni"
+      },
+      "linux": {
+        "url": "https://downloader.cursor.sh/builds/2502180s4ios0dk/linux/appImage/x64",
+        "checksum": "8re6yo8ttqiwi41m25v1"
+      }
+    }
+  },
+  "0.45.11": {
+    "platforms": {
+      "windows": {
+        "url": "https://downloader.cursor.sh/builds/250207y6nbaw5qc/windows/nsis/x64",
+        "checksum": "5ca7g61knursym5c4hq8"
+      },
+      "mac": {
+        "url": "https://downloader.cursor.sh/builds/250207y6nbaw5qc/mac/installer/universal",
+        "checksum": "v3vys7w02tg2tm20s4wt"
+      },
+      "mac_arm64": {
+        "url": "https://downloader.cursor.sh/builds/250207y6nbaw5qc/mac/installer/arm64",
+        "checksum": "ibn67drhs2l2dp1iu23t"
+      },
+      "mac_intel": {
+        "url": "https://downloader.cursor.sh/builds/250207y6nbaw5qc/mac/installer/x64",
+        "checksum": "y4jxkmn2opc6j3vxweek"
+      },
+      "linux": {
+        "url": "https://downloader.cursor.sh/builds/250207y6nbaw5qc/linux/appImage/x64",
+        "checksum": "di88xgp5nf1yd9ecf2ae"
+      }
+    }
+  },
+  "0.45.10": {
+    "platforms": {
+      "windows": {
+        "url": "https://downloader.cursor.sh/builds/250205buadkzpea/windows/nsis/x64",
+        "checksum": "tigztdz5z9wdjj4dgac0"
+      },
+      "mac": {
+        "url": "https://downloader.cursor.sh/builds/250205buadkzpea/mac/installer/universal",
+        "checksum": "5jpgpvosqhaxduv8yy48"
+      },
+      "mac_arm64": {
+        "url": "https://downloader.cursor.sh/builds/250205buadkzpea/mac/installer/arm64",
+        "checksum": "rcw40qsfz8ppe7eakjg6"
+      },
+      "mac_intel": {
+        "url": "https://downloader.cursor.sh/builds/250205buadkzpea/mac/installer/x64",
+        "checksum": "534c68d0ej9nhg9tp6n3"
+      },
+      "linux": {
+        "url": "https://downloader.cursor.sh/builds/250205buadkzpea/linux/appImage/x64",
+        "checksum": "y1dxh2gdyy5k2ruygw05"
+      }
+    }
+  },
+  "0.45.9": {
+    "platforms": {
+      "windows": {
+        "url": "https://downloader.cursor.sh/builds/250202tgstl42dt/windows/nsis/x64",
+        "checksum": "z0tqriqisvhq18ctt648"
+      },
+      "mac": {
+        "url": "https://downloader.cursor.sh/builds/250202tgstl42dt/mac/installer/universal",
+        "checksum": "5nbztrg5h6o29xni8dmq"
+      },
+      "mac_arm64": {
+        "url": "https://downloader.cursor.sh/builds/250202tgstl42dt/mac/installer/arm64",
+        "checksum": "tcr0csij56n8q6q8vcd1"
+      },
+      "mac_intel": {
+        "url": "https://downloader.cursor.sh/builds/250202tgstl42dt/mac/installer/x64",
+        "checksum": "sst22q4jnu77jh173auo"
+      },
+      "linux": {
+        "url": "https://downloader.cursor.sh/builds/250202tgstl42dt/linux/appImage/x64",
+        "checksum": "sr533m5alhddmm11nw4d"
+      }
+    }
+  },
+  "0.45.8": {
+    "platforms": {
+      "windows": {
+        "url": "https://downloader.cursor.sh/builds/250201b44xw1x2k/windows/nsis/x64",
+        "checksum": "js4ifwvw81nr77k65uit"
+      },
+      "mac": {
+        "url": "https://downloader.cursor.sh/builds/250201b44xw1x2k/mac/installer/universal",
+        "checksum": "6lvws0f3ecrk757v2zt9"
+      },
+      "mac_arm64": {
+        "url": "https://downloader.cursor.sh/builds/250201b44xw1x2k/mac/installer/arm64",
+        "checksum": "0yhmpic3sqaghu29w78u"
+      },
+      "mac_intel": {
+        "url": "https://downloader.cursor.sh/builds/250201b44xw1x2k/mac/installer/x64",
+        "checksum": "0zytqtjw18pdpxrxegr5"
+      },
+      "linux": {
+        "url": "https://downloader.cursor.sh/builds/250201b44xw1x2k/linux/appImage/x64",
+        "checksum": "eepmtwqkwe563eszdeqe"
+      }
+    }
+  },
+  "0.45.7": {
+    "platforms": {
+      "windows": {
+        "url": "https://downloader.cursor.sh/builds/250130nr6eorv84/windows/nsis/x64",
+        "checksum": "vjw6bv0grcjjjaoyvwbp"
+      },
+      "mac": {
+        "url": "https://downloader.cursor.sh/builds/250130nr6eorv84/mac/installer/universal",
+        "checksum": "tv0jasfzrjr09c6jc7oi"
+      },
+      "mac_arm64": {
+        "url": "https://downloader.cursor.sh/builds/250130nr6eorv84/mac/installer/arm64",
+        "checksum": "dcnq6bfqwzbb0uaozk3g"
+      },
+      "mac_intel": {
+        "url": "https://downloader.cursor.sh/builds/250130nr6eorv84/mac/installer/x64",
+        "checksum": "vrhigx1c3r6k38g0vf9e"
+      },
+      "linux": {
+        "url": "https://downloader.cursor.sh/builds/250130nr6eorv84/linux/appImage/x64",
+        "checksum": "mt547mb8t3fojqagw7uj"
+      }
+    }
+  },
+  "0.45.6": {
+    "platforms": {
+      "windows": {
+        "url": "https://downloader.cursor.sh/builds/25013021lv9say3/windows/nsis/x64",
+        "checksum": "jj54iq7nqhb3mgq4qt2w"
+      },
+      "mac": {
+        "url": "https://downloader.cursor.sh/builds/25013021lv9say3/mac/installer/universal",
+        "checksum": "1jui0csacklmkqs2f8el"
+      },
+      "mac_arm64": {
+        "url": "https://downloader.cursor.sh/builds/25013021lv9say3/mac/installer/arm64",
+        "checksum": "he1mq9eyxso6spivbn3i"
+      },
+      "mac_intel": {
+        "url": "https://downloader.cursor.sh/builds/25013021lv9say3/mac/installer/x64",
+        "checksum": "kte7f933f71egjeshnip"
+      },
+      "linux": {
+        "url": "https://downloader.cursor.sh/builds/25013021lv9say3/linux/appImage/x64",
+        "checksum": "6glyyk1pxrq3mw5aqcgm"
+      }
+    }
+  },
+  "0.45.5": {
+    "platforms": {
+      "windows": {
+        "url": "https://downloader.cursor.sh/builds/250128loaeyulq8/windows/nsis/x64",
+        "checksum": "0q0j8fd2ikhmqlayaa57"
+      },
+      "mac": {
+        "url": "https://downloader.cursor.sh/builds/250128loaeyulq8/mac/installer/universal",
+        "checksum": "lonoepsommsv7gmmacru"
+      },
+      "mac_arm64": {
+        "url": "https://downloader.cursor.sh/builds/250128loaeyulq8/mac/installer/arm64",
+        "checksum": "cyn0sqrl9sa8ikk0oncz"
+      },
+      "mac_intel": {
+        "url": "https://downloader.cursor.sh/builds/250128loaeyulq8/mac/installer/x64",
+        "checksum": "vathi9nnkx2jz1t0gr6z"
+      },
+      "linux": {
+        "url": "https://downloader.cursor.sh/builds/250128loaeyulq8/linux/appImage/x64",
+        "checksum": "t12j6p1t93zx2zpeulel"
+      }
+    }
+  },
+  "0.45.4": {
+    "platforms": {
+      "windows": {
+        "url": "https://downloader.cursor.sh/builds/250126vgr3vztvj/windows/nsis/x64",
+        "checksum": "x18ipxf90n8wjnsisiuc"
+      },
+      "mac": {
+        "url": "https://downloader.cursor.sh/builds/250126vgr3vztvj/mac/installer/universal",
+        "checksum": "pyugdsf9paz18yiaxf4k"
+      },
+      "mac_arm64": {
+        "url": "https://downloader.cursor.sh/builds/250126vgr3vztvj/mac/installer/arm64",
+        "checksum": "fi88uay3bzc80033vxn1"
+      },
+      "mac_intel": {
+        "url": "https://downloader.cursor.sh/builds/250126vgr3vztvj/mac/installer/x64",
+        "checksum": "4c9wmxohl7e8qenc80go"
+      },
+      "linux": {
+        "url": "https://downloader.cursor.sh/builds/250126vgr3vztvj/linux/appImage/x64",
+        "checksum": "1qvx0ga1ph87mtbltbru"
+      }
+    }
+  },
+  "0.45.3": {
+    "platforms": {
+      "windows": {
+        "url": "https://downloader.cursor.sh/builds/250124b0rcj0qql/windows/nsis/x64",
+        "checksum": "oelagp9cm2jkn2q7qspq"
+      },
+      "mac": {
+        "url": "https://downloader.cursor.sh/builds/250124b0rcj0qql/mac/installer/universal",
+        "checksum": "8a5t39xux95pd0o88vu8"
+      },
+      "mac_arm64": {
+        "url": "https://downloader.cursor.sh/builds/250124b0rcj0qql/mac/installer/arm64",
+        "checksum": "xjjp3byry629ldqog9ja"
+      },
+      "mac_intel": {
+        "url": "https://downloader.cursor.sh/builds/250124b0rcj0qql/mac/installer/x64",
+        "checksum": "5a9qc1ddve0rfvffmqab"
+      },
+      "linux": {
+        "url": "https://downloader.cursor.sh/builds/250124b0rcj0qql/linux/appImage/x64",
+        "checksum": "8yloqezhe8b3l10cfvoh"
+      }
+    }
+  },
+  "0.45.2": {
+    "platforms": {
+      "windows": {
+        "url": "https://downloader.cursor.sh/builds/250123mhituoa6o/windows/nsis/x64",
+        "checksum": "z9fu30dan1szkatwc7fc"
+      },
+      "mac": {
+        "url": "https://downloader.cursor.sh/builds/250123mhituoa6o/mac/installer/universal",
+        "checksum": "i9xdp1hey58vh0drzdsz"
+      },
+      "mac_arm64": {
+        "url": "https://downloader.cursor.sh/builds/250123mhituoa6o/mac/installer/arm64",
+        "checksum": "sdrvzdwkha2h1w6eon06"
+      },
+      "mac_intel": {
+        "url": "https://downloader.cursor.sh/builds/250123mhituoa6o/mac/installer/x64",
+        "checksum": "y6rp2omg1leu3fdb7bkt"
+      },
+      "linux": {
+        "url": "https://downloader.cursor.sh/builds/250123mhituoa6o/linux/appImage/x64",
+        "checksum": "jsphs9ro4vo1cooehdtl"
+      }
+    }
+  },
+  "0.45.1": {
+    "platforms": {
+      "windows": {
+        "url": "https://downloader.cursor.sh/builds/2501213ljml5byg/windows/nsis/x64",
+        "checksum": "qn6j2qc364cec9i1q622"
+      },
+      "mac": {
+        "url": "https://downloader.cursor.sh/builds/2501213ljml5byg/mac/installer/universal",
+        "checksum": "hyxv8kcvj7agfyx3i2qe"
+      },
+      "mac_arm64": {
+        "url": "https://downloader.cursor.sh/builds/2501213ljml5byg/mac/installer/arm64",
+        "checksum": "676cbx3nakgj6c24tkpa"
+      },
+      "mac_intel": {
+        "url": "https://downloader.cursor.sh/builds/2501213ljml5byg/mac/installer/x64",
+        "checksum": "ptjxh7o7hq3xr50qfexc"
+      },
+      "linux": {
+        "url": "https://downloader.cursor.sh/builds/2501213ljml5byg/linux/appImage/x64",
+        "checksum": "torxlyt4xv5s64njymvz"
+      }
+    }
+  },
+  "0.45.0": {
+    "platforms": {
+      "windows": {
+        "url": "https://downloader.cursor.sh/builds/250120dh9ezx9pg/windows/nsis/x64",
+        "checksum": "w80flnrwkixoqztqpj5f"
+      },
+      "mac": {
+        "url": "https://downloader.cursor.sh/builds/250120dh9ezx9pg/mac/installer/universal",
+        "checksum": "74m1ubvw2apgeupqkt5k"
+      },
+      "mac_arm64": {
+        "url": "https://downloader.cursor.sh/builds/250120dh9ezx9pg/mac/installer/arm64",
+        "checksum": "bsrr2tav36570tkrrmg5"
+      },
+      "mac_intel": {
+        "url": "https://downloader.cursor.sh/builds/250120dh9ezx9pg/mac/installer/x64",
+        "checksum": "xo4es5wcwy54e2xt3nfy"
+      },
+      "linux": {
+        "url": "https://downloader.cursor.sh/builds/250120dh9ezx9pg/linux/appImage/x64",
+        "checksum": "bdw662r5o6ynnot927vy"
+      }
+    }
+  },
+  "0.44.11": {
+    "platforms": {
+      "windows": {
+        "url": "https://downloader.cursor.sh/builds/250103fqxdt5u9z/windows/nsis/x64",
+        "checksum": "6bjkb4fpgf5cgmeb802i"
+      },
+      "mac": {
+        "url": "https://downloader.cursor.sh/builds/250103fqxdt5u9z/mac/installer/universal",
+        "checksum": "2n9km8n3uq8479mpaj2p"
+      },
+      "mac_arm64": {
+        "url": "https://downloader.cursor.sh/builds/250103fqxdt5u9z/mac/installer/arm64",
+        "checksum": "l8koriyfx519id43lba4"
+      },
+      "mac_intel": {
+        "url": "https://downloader.cursor.sh/builds/250103fqxdt5u9z/mac/installer/x64",
+        "checksum": "a1iy44166q1osh14mj15"
+      },
+      "linux": {
+        "url": "https://downloader.cursor.sh/builds/250103fqxdt5u9z/linux/appImage/x64",
+        "checksum": "vxl75ilt4md6otjzctb2"
+      }
+    }
+  },
+  "0.44.10": {
+    "platforms": {
+      "windows": {
+        "url": "https://downloader.cursor.sh/builds/250102ys80vtnud/windows/nsis/x64",
+        "checksum": "p2ebjhp27qwgcawptv2n"
+      },
+      "mac": {
+        "url": "https://downloader.cursor.sh/builds/250102ys80vtnud/mac/installer/universal",
+        "checksum": "sh30ydb3ohi7sh62f3x6"
+      },
+      "mac_arm64": {
+        "url": "https://downloader.cursor.sh/builds/250102ys80vtnud/mac/installer/arm64",
+        "checksum": "2wm99uo4fhwl7355ikp8"
+      },
+      "mac_intel": {
+        "url": "https://downloader.cursor.sh/builds/250102ys80vtnud/mac/installer/x64",
+        "checksum": "z5od65g7wh0o4cj95mst"
+      },
+      "linux": {
+        "url": "https://downloader.cursor.sh/builds/250102ys80vtnud/linux/appImage/x64",
+        "checksum": "wt9o6t7w7f9e67d4to52"
+      }
+    }
+  },
+  "0.44.9": {
+    "platforms": {
+      "windows": {
+        "url": "https://downloader.cursor.sh/builds/2412268nc6pfzgo/windows/nsis/x64",
+        "checksum": "pg46dhzjd0v28ulw4vbf"
+      },
+      "mac": {
+        "url": "https://downloader.cursor.sh/builds/2412268nc6pfzgo/mac/installer/universal",
+        "checksum": "bnw6efspwlq93j9ay8o1"
+      },
+      "mac_arm64": {
+        "url": "https://downloader.cursor.sh/builds/2412268nc6pfzgo/mac/installer/arm64",
+        "checksum": "pf4f3x8oltcvn0m8serj"
+      },
+      "mac_intel": {
+        "url": "https://downloader.cursor.sh/builds/2412268nc6pfzgo/mac/installer/x64",
+        "checksum": "4fty038lh1kel3un6e6u"
+      },
+      "linux": {
+        "url": "https://downloader.cursor.sh/builds/2412268nc6pfzgo/linux/appImage/x64",
+        "checksum": "ltv2qwkxzq25ehg1fj1i"
+      }
+    }
+  },
+  "0.44.8": {
+    "platforms": {
+      "windows": {
+        "url": "https://downloader.cursor.sh/builds/241222ooktny8mh/windows/nsis/x64",
+        "checksum": "d2wxd1hkgsfyv19qizpi"
+      },
+      "mac": {
+        "url": "https://downloader.cursor.sh/builds/241222ooktny8mh/mac/installer/universal",
+        "checksum": "erl2qy4c8luyq2x958c3"
+      },
+      "mac_arm64": {
+        "url": "https://downloader.cursor.sh/builds/241222ooktny8mh/mac/installer/arm64",
+        "checksum": "bnk1n7rylftkvnff05do"
+      },
+      "mac_intel": {
+        "url": "https://downloader.cursor.sh/builds/241222ooktny8mh/mac/installer/x64",
+        "checksum": "66yitdrlfuzyuvj76r6e"
+      },
+      "linux": {
+        "url": "https://downloader.cursor.sh/builds/241222ooktny8mh/linux/appImage/x64",
+        "checksum": "ley0csm7c4582ag4jgun"
+      }
+    }
+  },
+  "0.44.7": {
+    "platforms": {
+      "windows": {
+        "url": "https://downloader.cursor.sh/builds/2412219nhracv01/windows/nsis/x64",
+        "checksum": "z8ugoiduhe53p49oo6yk"
+      },
+      "mac": {
+        "url": "https://downloader.cursor.sh/builds/2412219nhracv01/mac/installer/universal",
+        "checksum": "8rx5gtdzj9faeubon4pz"
+      },
+      "mac_arm64": {
+        "url": "https://downloader.cursor.sh/builds/2412219nhracv01/mac/installer/arm64",
+        "checksum": "8j6u0a5n3mhgthkrwfrr"
+      },
+      "mac_intel": {
+        "url": "https://downloader.cursor.sh/builds/2412219nhracv01/mac/installer/x64",
+        "checksum": "23ty90oib9bpcujz1kcj"
+      },
+      "linux": {
+        "url": "https://downloader.cursor.sh/builds/2412219nhracv01/linux/appImage/x64",
+        "checksum": "mmcyzc5yicd9jg2vf4t4"
+      }
+    }
+  },
+  "0.44.6": {
+    "platforms": {
+      "windows": {
+        "url": "https://downloader.cursor.sh/builds/2412214pmryneua/windows/nsis/x64",
+        "checksum": "9w6llgrf1buen2hvafg8"
+      },
+      "mac": {
+        "url": "https://downloader.cursor.sh/builds/2412214pmryneua/mac/installer/universal",
+        "checksum": "2dtez91pi57pbssrv5nb"
+      },
+      "mac_arm64": {
+        "url": "https://downloader.cursor.sh/builds/2412214pmryneua/mac/installer/arm64",
+        "checksum": "tokpxdet72m1blja60be"
+      },
+      "mac_intel": {
+        "url": "https://downloader.cursor.sh/builds/2412214pmryneua/mac/installer/x64",
+        "checksum": "y4bv8kvay2twgq4ex1qx"
+      },
+      "linux": {
+        "url": "https://downloader.cursor.sh/builds/2412214pmryneua/linux/appImage/x64",
+        "checksum": "h9g8tj5q7l111n8rr4tm"
+      }
+    }
+  },
+  "0.44.5": {
+    "platforms": {
+      "windows": {
+        "url": "https://downloader.cursor.sh/builds/241220s3ux0e1tv/windows/nsis/x64",
+        "checksum": "o5qz516rumk1gi8bi5cw"
+      },
+      "mac": {
+        "url": "https://downloader.cursor.sh/builds/241220s3ux0e1tv/mac/installer/universal",
+        "checksum": "9twidmw32uf0idxrcb5g"
+      },
+      "mac_arm64": {
+        "url": "https://downloader.cursor.sh/builds/241220s3ux0e1tv/mac/installer/arm64",
+        "checksum": "1fw7kuz8luctrdmpxrcf"
+      },
+      "mac_intel": {
+        "url": "https://downloader.cursor.sh/builds/241220s3ux0e1tv/mac/installer/x64",
+        "checksum": "pdstmso8p8awfixfr8a9"
+      },
+      "linux": {
+        "url": "https://downloader.cursor.sh/builds/241220s3ux0e1tv/linux/appImage/x64",
+        "checksum": "k5qq55fauqfvk5wxli9u"
+      }
+    }
+  },
+  "0.44.4": {
+    "platforms": {
+      "windows": {
+        "url": "https://downloader.cursor.sh/builds/241219117fcvexy/windows/nsis/x64",
+        "checksum": "mk2hwlrf8ussi941dov7"
+      },
+      "mac": {
+        "url": "https://downloader.cursor.sh/builds/241219117fcvexy/mac/installer/universal",
+        "checksum": "tiytl80r1h2ay87pct39"
+      },
+      "mac_arm64": {
+        "url": "https://downloader.cursor.sh/builds/241219117fcvexy/mac/installer/arm64",
+        "checksum": "8x59lcxgfm2texaugfr8"
+      },
+      "mac_intel": {
+        "url": "https://downloader.cursor.sh/builds/241219117fcvexy/mac/installer/x64",
+        "checksum": "qdak5nwiuqqnowvwfkjc"
+      },
+      "linux": {
+        "url": "https://downloader.cursor.sh/builds/241219117fcvexy/linux/appImage/x64",
+        "checksum": "mu3uyyy96hjor6s2pgjc"
+      }
+    }
+  },
+  "0.44.3": {
+    "platforms": {
+      "windows": {
+        "url": "https://downloader.cursor.sh/builds/241218sybfbogmq/windows/nsis/x64",
+        "checksum": "qvb9efprnas27gae2v8l"
+      },
+      "mac": {
+        "url": "https://downloader.cursor.sh/builds/241218sybfbogmq/mac/installer/universal",
+        "checksum": "16iwth6qwmu2686d6btm"
+      },
+      "mac_arm64": {
+        "url": "https://downloader.cursor.sh/builds/241218sybfbogmq/mac/installer/arm64",
+        "checksum": "1elzmmu7lt4jfn2m7tqp"
+      },
+      "mac_intel": {
+        "url": "https://downloader.cursor.sh/builds/241218sybfbogmq/mac/installer/x64",
+        "checksum": "tbwf12bq7bqfpvts5p90"
+      },
+      "linux": {
+        "url": "https://downloader.cursor.sh/builds/241218sybfbogmq/linux/appImage/x64",
+        "checksum": "oxcojfm92xyp5gyjz83u"
+      }
+    }
+  },
+  "0.44.2": {
+    "platforms": {
+      "windows": {
+        "url": "https://downloader.cursor.sh/builds/241218ntls52u8v/windows/nsis/x64",
+        "checksum": "oqhbpu00javh4xcv0goz"
+      },
+      "mac": {
+        "url": "https://downloader.cursor.sh/builds/241218ntls52u8v/mac/installer/universal",
+        "checksum": "ltvqap5kdswekmvby7mf"
+      },
+      "mac_arm64": {
+        "url": "https://downloader.cursor.sh/builds/241218ntls52u8v/mac/installer/arm64",
+        "checksum": "sdp1y8v4up4d0ovcvwhd"
+      },
+      "mac_intel": {
+        "url": "https://downloader.cursor.sh/builds/241218ntls52u8v/mac/installer/x64",
+        "checksum": "rjk8qvlyv5k52zg5hns1"
+      },
+      "linux": {
+        "url": "https://downloader.cursor.sh/builds/241218ntls52u8v/linux/appImage/x64",
+        "checksum": "d53e26xl6n6od4zzwg8n"
+      }
+    }
+  },
+  "0.44.0": {
+    "platforms": {
+      "windows": {
+        "url": "https://downloader.cursor.sh/builds/2412187f9v0nffu/windows/nsis/x64",
+        "checksum": "r9guslbuvp89rahkdmls"
+      },
+      "mac": {
+        "url": "https://downloader.cursor.sh/builds/2412187f9v0nffu/mac/installer/universal",
+        "checksum": "5z67spm2fhd92xz33jak"
+      },
+      "mac_arm64": {
+        "url": "https://downloader.cursor.sh/builds/2412187f9v0nffu/mac/installer/arm64",
+        "checksum": "d9pkuastair01oe0nxwg"
+      },
+      "mac_intel": {
+        "url": "https://downloader.cursor.sh/builds/2412187f9v0nffu/mac/installer/x64",
+        "checksum": "zph6c1d79m1d3zr1rpt0"
+      },
+      "linux": {
+        "url": "https://downloader.cursor.sh/builds/2412187f9v0nffu/linux/appImage/x64",
+        "checksum": "qeqxapeztj7tt3so43zb"
+      }
+    }
+  },
+  "0.43.6": {
+    "platforms": {
+      "windows": {
+        "url": "https://downloader.cursor.sh/builds/241206z7j6me2e2/windows/nsis/x64",
+        "checksum": "7n6eit0gxu2ij7srnfzw"
+      },
+      "mac": {
+        "url": "https://downloader.cursor.sh/builds/241206z7j6me2e2/mac/installer/universal",
+        "checksum": "kpdxqq3rkin3rdm1pmgs"
+      },
+      "mac_arm64": {
+        "url": "https://downloader.cursor.sh/builds/241206z7j6me2e2/mac/installer/arm64",
+        "checksum": "s5mzmyg7gkfjued6pzit"
+      },
+      "mac_intel": {
+        "url": "https://downloader.cursor.sh/builds/241206z7j6me2e2/mac/installer/x64",
+        "checksum": "yxvrtulqqhztpmtkmftx"
+      },
+      "linux": {
+        "url": "https://downloader.cursor.sh/builds/241206z7j6me2e2/linux/appImage/x64",
+        "checksum": "h7ur2t1u62qjukxt4ouu"
+      }
+    }
+  },
+  "0.43.5": {
+    "platforms": {
+      "windows": {
+        "url": "https://downloader.cursor.sh/builds/241127pdg4cnbu2/windows/nsis/x64",
+        "checksum": "8vmideynfzd3f8pgvd0o"
+      },
+      "mac": {
+        "url": "https://downloader.cursor.sh/builds/241127pdg4cnbu2/mac/installer/universal",
+        "checksum": "7xodrvink03chqo5tras"
+      },
+      "mac_arm64": {
+        "url": "https://downloader.cursor.sh/builds/241127pdg4cnbu2/mac/installer/arm64",
+        "checksum": "62m79yarz1z5xkva0vmb"
+      },
+      "mac_intel": {
+        "url": "https://downloader.cursor.sh/builds/241127pdg4cnbu2/mac/installer/x64",
+        "checksum": "36pqf4iv3lj3pyymlj42"
+      },
+      "linux": {
+        "url": "https://downloader.cursor.sh/builds/241127pdg4cnbu2/linux/appImage/x64",
+        "checksum": "bu0rhrejzo69clgh5wq7"
+      }
+    }
+  },
+  "0.43.4": {
+    "platforms": {
+      "windows": {
+        "url": "https://downloader.cursor.sh/builds/241126w13goyvrs/windows/nsis/x64",
+        "checksum": "t63cgildl63jzzqoz543"
+      },
+      "mac": {
+        "url": "https://downloader.cursor.sh/builds/241126w13goyvrs/mac/installer/universal",
+        "checksum": "m0aj0czlv4e6zvbevvf3"
+      },
+      "mac_arm64": {
+        "url": "https://downloader.cursor.sh/builds/241126w13goyvrs/mac/installer/arm64",
+        "checksum": "wmg7moko84kpb9ljih4k"
+      },
+      "mac_intel": {
+        "url": "https://downloader.cursor.sh/builds/241126w13goyvrs/mac/installer/x64",
+        "checksum": "94cul8l88aw6hcyqp1sa"
+      },
+      "linux": {
+        "url": "https://downloader.cursor.sh/builds/241126w13goyvrs/linux/appImage/x64",
+        "checksum": "u5x1c7v8ke1yco96h4op"
+      }
+    }
+  },
+  "0.43.3": {
+    "platforms": {
+      "windows": {
+        "url": "https://downloader.cursor.sh/builds/2411246yqzx1jmm/windows/nsis/x64",
+        "checksum": "rw11g21suj8h3rd7mqgd"
+      },
+      "mac": {
+        "url": "https://downloader.cursor.sh/builds/2411246yqzx1jmm/mac/installer/universal",
+        "checksum": "u3ltqsf9egxggbh9kjdu"
+      },
+      "mac_arm64": {
+        "url": "https://downloader.cursor.sh/builds/2411246yqzx1jmm/mac/installer/arm64",
+        "checksum": "6jt7jgw169e4fx8fdgut"
+      },
+      "mac_intel": {
+        "url": "https://downloader.cursor.sh/builds/2411246yqzx1jmm/mac/installer/x64",
+        "checksum": "ozzxnvquo82lnmlebkrj"
+      },
+      "linux": {
+        "url": "https://downloader.cursor.sh/builds/2411246yqzx1jmm/linux/appImage/x64",
+        "checksum": "eg8ttbopxjzce26ew4cw"
+      }
+    }
+  },
+  "0.43.1": {
+    "platforms": {
+      "windows": {
+        "url": "https://downloader.cursor.sh/builds/241124gsiwb66nc/windows/nsis/x64",
+        "checksum": "ih4pkmaorkxsbv0rswen"
+      },
+      "mac": {
+        "url": "https://downloader.cursor.sh/builds/241124gsiwb66nc/mac/installer/universal",
+        "checksum": "0zax2ftlyvlb9gtov4bc"
+      },
+      "mac_arm64": {
+        "url": "https://downloader.cursor.sh/builds/241124gsiwb66nc/mac/installer/arm64",
+        "checksum": "gq33uy7cjjmron9uzztp"
+      },
+      "mac_intel": {
+        "url": "https://downloader.cursor.sh/builds/241124gsiwb66nc/mac/installer/x64",
+        "checksum": "fhv2e8fqnw6t6swxsa80"
+      },
+      "linux": {
+        "url": "https://downloader.cursor.sh/builds/241124gsiwb66nc/linux/appImage/x64",
+        "checksum": "8didyjt736zp1q1yh9lz"
+      }
+    }
+  },
+  "0.43.0": {
+    "platforms": {
+      "windows": {
+        "url": "https://downloader.cursor.sh/builds/24112423a8e6ct7/windows/nsis/x64",
+        "checksum": "pyzs3dgh3sdxp915yzg9"
+      },
+      "mac": {
+        "url": "https://downloader.cursor.sh/builds/24112423a8e6ct7/mac/installer/universal",
+        "checksum": "xigoyst3azr0einzh51b"
+      },
+      "mac_arm64": {
+        "url": "https://downloader.cursor.sh/builds/24112423a8e6ct7/mac/installer/arm64",
+        "checksum": "e9lskowmqol0r2bq36rk"
+      },
+      "mac_intel": {
+        "url": "https://downloader.cursor.sh/builds/24112423a8e6ct7/mac/installer/x64",
+        "checksum": "qgwsxywvjxzi9kfqo2i9"
+      },
+      "linux": {
+        "url": "https://downloader.cursor.sh/builds/24112423a8e6ct7/linux/appImage/x64",
+        "checksum": "weey54amg7sqat8fkk1x"
+      }
+    }
+  },
+  "0.42.5": {
+    "platforms": {
+      "windows": {
+        "url": "https://downloader.cursor.sh/builds/24111460bf2loz1/windows/nsis/x64",
+        "checksum": "v6xy04ryrqpebsy58kmd"
+      },
+      "mac": {
+        "url": "https://downloader.cursor.sh/builds/24111460bf2loz1/mac/installer/universal",
+        "checksum": "rztbfy1bw5kzi8ger9km"
+      },
+      "mac_arm64": {
+        "url": "https://downloader.cursor.sh/builds/24111460bf2loz1/mac/installer/arm64",
+        "checksum": "gyf58j7klg2wtwfr4bpo"
+      },
+      "mac_intel": {
+        "url": "https://downloader.cursor.sh/builds/24111460bf2loz1/mac/installer/x64",
+        "checksum": "6xulfi2pwuvxi91wmz6t"
+      },
+      "linux": {
+        "url": "https://downloader.cursor.sh/builds/24111460bf2loz1/linux/appImage/x64",
+        "checksum": "8sxvwjqvc56gvtscx14k"
+      }
+    }
+  },
+  "0.42.4": {
+    "platforms": {
+      "windows": {
+        "url": "https://downloader.cursor.sh/builds/2410291z3bdg1dy/windows/nsis/x64",
+        "checksum": "jgknmujrzmj3ub43l5t7"
+      },
+      "mac": {
+        "url": "https://downloader.cursor.sh/builds/2410291z3bdg1dy/mac/installer/universal",
+        "checksum": "3gaehmoy557axj0a7e7g"
+      },
+      "mac_arm64": {
+        "url": "https://downloader.cursor.sh/builds/2410291z3bdg1dy/mac/installer/arm64",
+        "checksum": "9di8umfyei9r0b8owuem"
+      },
+      "mac_intel": {
+        "url": "https://downloader.cursor.sh/builds/2410291z3bdg1dy/mac/installer/x64",
+        "checksum": "4oiij7cxx2ji2fqli8rk"
+      },
+      "linux": {
+        "url": "https://downloader.cursor.sh/builds/2410291z3bdg1dy/linux/appImage/x64",
+        "checksum": "axphqcwvi1cdry8ctyle"
+      }
+    }
+  },
+  "0.42.3": {
+    "platforms": {
+      "windows": {
+        "url": "https://downloader.cursor.sh/builds/241016kxu9umuir/windows/nsis/x64",
+        "checksum": "evw1lpxcqcvwyqtw73s4"
+      },
+      "mac": {
+        "url": "https://downloader.cursor.sh/builds/241016kxu9umuir/mac/installer/universal",
+        "checksum": "am35q9s6r1qbbf0fraka"
+      },
+      "mac_arm64": {
+        "url": "https://downloader.cursor.sh/builds/241016kxu9umuir/mac/installer/arm64",
+        "checksum": "e1zrf6dvan4sjt1kpv8x"
+      },
+      "mac_intel": {
+        "url": "https://downloader.cursor.sh/builds/241016kxu9umuir/mac/installer/x64",
+        "checksum": "duhpo6hxmf4zna040q6q"
+      },
+      "linux": {
+        "url": "https://downloader.cursor.sh/builds/241016kxu9umuir/linux/appImage/x64",
+        "checksum": "yjv28rirk2ssn308k6eg"
+      }
+    }
+  },
+  "0.42.2": {
+    "platforms": {
+      "windows": {
+        "url": "https://downloader.cursor.sh/builds/2410127mj66lvaq/windows/nsis/x64",
+        "checksum": "ujn5971rrj49rinjuoja"
+      },
+      "mac": {
+        "url": "https://downloader.cursor.sh/builds/2410127mj66lvaq/mac/installer/universal",
+        "checksum": "ylrfi6zyb2k3tleqxgk5"
+      },
+      "mac_arm64": {
+        "url": "https://downloader.cursor.sh/builds/2410127mj66lvaq/mac/installer/arm64",
+        "checksum": "y8rez31jk99ey88fqr68"
+      },
+      "mac_intel": {
+        "url": "https://downloader.cursor.sh/builds/2410127mj66lvaq/mac/installer/x64",
+        "checksum": "r97mr3fvwp2uzo2fy02z"
+      },
+      "linux": {
+        "url": "https://downloader.cursor.sh/builds/2410127mj66lvaq/linux/appImage/x64",
+        "checksum": "hn8y4jc9kv8wijiyox49"
+      }
+    }
+  },
+  "0.42.1": {
+    "platforms": {
+      "windows": {
+        "url": "https://downloader.cursor.sh/builds/241011i66p9fuvm/windows/nsis/x64",
+        "checksum": "2mauy0s3vkdi4zs5ir0m"
+      },
+      "mac": {
+        "url": "https://downloader.cursor.sh/builds/241011i66p9fuvm/mac/installer/universal",
+        "checksum": "ngb8go71tmd0ivndtm2d"
+      },
+      "mac_arm64": {
+        "url": "https://downloader.cursor.sh/builds/241011i66p9fuvm/mac/installer/arm64",
+        "checksum": "8abtdf8n0dbeceqnbnh1"
+      },
+      "mac_intel": {
+        "url": "https://downloader.cursor.sh/builds/241011i66p9fuvm/mac/installer/x64",
+        "checksum": "r34r39n0r2s1shafo049"
+      },
+      "linux": {
+        "url": "https://downloader.cursor.sh/builds/241011i66p9fuvm/linux/appImage/x64",
+        "checksum": "v9y9rujx5nmzyx8vwnoy"
+      }
+    }
+  },
+  "0.42.0": {
+    "platforms": {
+      "windows": {
+        "url": "https://downloader.cursor.sh/builds/241009fij7nohn5/windows/nsis/x64",
+        "checksum": "k5hcsgfwk22c5ahjgirj"
+      },
+      "mac": {
+        "url": "https://downloader.cursor.sh/builds/241009fij7nohn5/mac/installer/universal",
+        "checksum": "3ixbnqfmc99f6mzoo6dv"
+      },
+      "mac_arm64": {
+        "url": "https://downloader.cursor.sh/builds/241009fij7nohn5/mac/installer/arm64",
+        "checksum": "6nk850zfpctdzjsxnbhy"
+      },
+      "mac_intel": {
+        "url": "https://downloader.cursor.sh/builds/241009fij7nohn5/mac/installer/x64",
+        "checksum": "qqc96js6xade72r3ylty"
+      },
+      "linux": {
+        "url": "https://downloader.cursor.sh/builds/241009fij7nohn5/linux/appImage/x64",
+        "checksum": "fvgvb6l24dzfrvkl944r"
+      }
+    }
+  },
+  "0.41.3": {
+    "platforms": {
+      "windows": {
+        "url": "https://downloader.cursor.sh/builds/240925fkhcqg263/windows/nsis/x64",
+        "checksum": "fp8pidw5280orzk7a5r9"
+      },
+      "mac": {
+        "url": "https://downloader.cursor.sh/builds/240925fkhcqg263/mac/installer/universal",
+        "checksum": "he9bgbngojnit0slyzwr"
+      },
+      "mac_arm64": {
+        "url": "https://downloader.cursor.sh/builds/240925fkhcqg263/mac/installer/arm64",
+        "checksum": "75ug75yudat1utgkhe3m"
+      },
+      "mac_intel": {
+        "url": "https://downloader.cursor.sh/builds/240925fkhcqg263/mac/installer/x64",
+        "checksum": "2dr8cdo99wulzb1d43ld"
+      },
+      "linux": {
+        "url": "https://downloader.cursor.sh/builds/240925fkhcqg263/linux/appImage/x64",
+        "checksum": "mzszsieguo0y78xzncm2"
+      }
+    }
+  },
+  "0.41.2": {
+    "platforms": {
+      "windows": {
+        "url": "https://downloader.cursor.sh/builds/240921llnho65ov/windows/nsis/x64",
+        "checksum": "62kt5rnouqbv5ipnpf22"
+      },
+      "mac": {
+        "url": "https://downloader.cursor.sh/builds/240921llnho65ov/mac/installer/universal",
+        "checksum": "z227x3big95v7ip8gt9i"
+      },
+      "mac_arm64": {
+        "url": "https://downloader.cursor.sh/builds/240921llnho65ov/mac/installer/arm64",
+        "checksum": "zd4hinf8kr9hjx11asmr"
+      },
+      "mac_intel": {
+        "url": "https://downloader.cursor.sh/builds/240921llnho65ov/mac/installer/x64",
+        "checksum": "wdival2e37ol0zfy6tts"
+      },
+      "linux": {
+        "url": "https://downloader.cursor.sh/builds/240921llnho65ov/linux/appImage/x64",
+        "checksum": "7clgxnzl87zla3mrp37o"
+      }
+    }
+  },
+  "0.41.1": {
+    "platforms": {
+      "windows": {
+        "url": "https://downloader.cursor.sh/builds/2409189xe3envg5/windows/nsis/x64",
+        "checksum": "j1n94lesr5joncf4cz3m"
+      },
+      "mac": {
+        "url": "https://downloader.cursor.sh/builds/2409189xe3envg5/mac/installer/universal",
+        "checksum": "3rzrc3oc0j0xbyh6wh9t"
+      },
+      "mac_arm64": {
+        "url": "https://downloader.cursor.sh/builds/2409189xe3envg5/mac/installer/arm64",
+        "checksum": "f7rjfg5tjmtbxh59icqm"
+      },
+      "mac_intel": {
+        "url": "https://downloader.cursor.sh/builds/2409189xe3envg5/mac/installer/x64",
+        "checksum": "e2ncdiittuftzs8kz7ye"
+      },
+      "linux": {
+        "url": "https://downloader.cursor.sh/builds/2409189xe3envg5/linux/appImage/x64",
+        "checksum": "of8bsoenwqoxeq0zqg1l"
+      }
+    }
+  },
+  "0.40.4": {
+    "platforms": {
+      "windows": {
+        "url": "https://downloader.cursor.sh/builds/2409052yfcjagw2/windows/nsis/x64",
+        "checksum": "8a35f8hgeifijr10oy2y"
+      },
+      "mac": {
+        "url": "https://downloader.cursor.sh/builds/2409052yfcjagw2/mac/installer/universal",
+        "checksum": "m7pt1jib4ig9btp42m23"
+      },
+      "mac_arm64": {
+        "url": "https://downloader.cursor.sh/builds/2409052yfcjagw2/mac/installer/arm64",
+        "checksum": "jfba6ka21pj7ekeiaoga"
+      },
+      "mac_intel": {
+        "url": "https://downloader.cursor.sh/builds/2409052yfcjagw2/mac/installer/x64",
+        "checksum": "ew4jhm1im8mpx3yiwz5l"
+      },
+      "linux": {
+        "url": "https://downloader.cursor.sh/builds/2409052yfcjagw2/linux/appImage/x64",
+        "checksum": "rknoi5cp0ckv9x5g6qd5"
+      }
+    }
+  },
+  "0.40.3": {
+    "platforms": {
+      "windows": {
+        "url": "https://downloader.cursor.sh/builds/240829epqamqp7h/windows/nsis/x64",
+        "checksum": "sczxut85a3i0wgg0u49z"
+      },
+      "mac": {
+        "url": "https://downloader.cursor.sh/builds/240829epqamqp7h/mac/installer/universal",
+        "checksum": "c6hew1o2kpay59e1mkpt"
+      },
+      "mac_arm64": {
+        "url": "https://downloader.cursor.sh/builds/240829epqamqp7h/mac/installer/arm64",
+        "checksum": "gcjfvn8tdjtvjjs63xrn"
+      },
+      "mac_intel": {
+        "url": "https://downloader.cursor.sh/builds/240829epqamqp7h/mac/installer/x64",
+        "checksum": "e43944zu7mlcvl2knlhf"
+      },
+      "linux": {
+        "url": "https://downloader.cursor.sh/builds/240829epqamqp7h/linux/appImage/x64",
+        "checksum": "1p2p3c6rzrxl8r6c3xl1"
+      }
+    }
+  },
+  "0.40.2": {
+    "platforms": {
+      "windows": {
+        "url": "https://downloader.cursor.sh/builds/240828c021k3aib/windows/nsis/x64",
+        "checksum": "ph38f2li8zaaz71t2gzr"
+      },
+      "mac": {
+        "url": "https://downloader.cursor.sh/builds/240828c021k3aib/mac/installer/universal",
+        "checksum": "obbg5k54u7yhkc99qn80"
+      },
+      "mac_arm64": {
+        "url": "https://downloader.cursor.sh/builds/240828c021k3aib/mac/installer/arm64",
+        "checksum": "tpdkkwb9a5vfvi4mqpgn"
+      },
+      "mac_intel": {
+        "url": "https://downloader.cursor.sh/builds/240828c021k3aib/mac/installer/x64",
+        "checksum": "dnfgiqojbkqfdqlf92c2"
+      },
+      "linux": {
+        "url": "https://downloader.cursor.sh/builds/240828c021k3aib/linux/appImage/x64",
+        "checksum": "s607hxh8v9txtibw2m3q"
+      }
+    }
+  },
+  "0.40.1": {
+    "platforms": {
+      "windows": {
+        "url": "https://downloader.cursor.sh/builds/2408245thnycuzj/windows/nsis/x64",
+        "checksum": "1kdyzfdix6ax5zmv9o1f"
+      },
+      "mac": {
+        "url": "https://downloader.cursor.sh/builds/2408245thnycuzj/mac/installer/universal",
+        "checksum": "uicqpouq8bx36khr8r3l"
+      },
+      "mac_arm64": {
+        "url": "https://downloader.cursor.sh/builds/2408245thnycuzj/mac/installer/arm64",
+        "checksum": "emqnd3zf7rxipdzt7uzf"
+      },
+      "mac_intel": {
+        "url": "https://downloader.cursor.sh/builds/2408245thnycuzj/mac/installer/x64",
+        "checksum": "pvuotlth79tsvefj7dqs"
+      },
+      "linux": {
+        "url": "https://downloader.cursor.sh/builds/2408245thnycuzj/linux/appImage/x64",
+        "checksum": "71ly54zcmj2dobsy4153"
+      }
+    }
+  },
+  "0.40.0": {
+    "platforms": {
+      "windows": {
+        "url": "https://downloader.cursor.sh/builds/24082202sreugb2/windows/nsis/x64",
+        "checksum": "ztgbbfkrl4w2ka09ldt5"
+      },
+      "mac": {
+        "url": "https://downloader.cursor.sh/builds/24082202sreugb2/mac/installer/universal",
+        "checksum": "bl53p43bx0e5cfud2e77"
+      },
+      "mac_arm64": {
+        "url": "https://downloader.cursor.sh/builds/24082202sreugb2/mac/installer/arm64",
+        "checksum": "hjna092az8ioyus6zbf1"
+      },
+      "mac_intel": {
+        "url": "https://downloader.cursor.sh/builds/24082202sreugb2/mac/installer/x64",
+        "checksum": "429xi0mys5bnsiyigt7s"
+      },
+      "linux": {
+        "url": "https://downloader.cursor.sh/builds/24082202sreugb2/linux/appImage/x64",
+        "checksum": "ul6zef3nzcs5ld3lfhjk"
+      }
+    }
+  },
+  "0.39.6": {
+    "platforms": {
+      "windows": {
+        "url": "https://downloader.cursor.sh/builds/240819ih4ta2fye/windows/nsis/x64",
+        "checksum": "7838xviuklof9942ddmw"
+      },
+      "mac": {
+        "url": "https://downloader.cursor.sh/builds/240819ih4ta2fye/mac/installer/universal",
+        "checksum": "77za6qit6jw5ocxoun5v"
+      },
+      "mac_arm64": {
+        "url": "https://downloader.cursor.sh/builds/240819ih4ta2fye/mac/installer/arm64",
+        "checksum": "kx834jo78qwf1ufh5anu"
+      },
+      "mac_intel": {
+        "url": "https://downloader.cursor.sh/builds/240819ih4ta2fye/mac/installer/x64",
+        "checksum": "y3sguqav3tj5iqd77ji7"
+      },
+      "linux": {
+        "url": "https://downloader.cursor.sh/builds/240819ih4ta2fye/linux/appImage/x64",
+        "checksum": "2ruup2ac9eivwh5ugpn9"
+      }
+    }
+  },
+  "0.39.5": {
+    "platforms": {
+      "windows": {
+        "url": "https://downloader.cursor.sh/builds/240814y9rhzmu7h/windows/nsis/x64",
+        "checksum": "z61gspttshycgu1mv579"
+      },
+      "mac": {
+        "url": "https://downloader.cursor.sh/builds/240814y9rhzmu7h/mac/installer/universal",
+        "checksum": "plqpdpg2hvg4wbwlafoa"
+      },
+      "mac_arm64": {
+        "url": "https://downloader.cursor.sh/builds/240814y9rhzmu7h/mac/installer/arm64",
+        "checksum": "5dyzyop35w2750hqyt3h"
+      },
+      "mac_intel": {
+        "url": "https://downloader.cursor.sh/builds/240814y9rhzmu7h/mac/installer/x64",
+        "checksum": "b5z0d73p3ztow25uqeee"
+      },
+      "linux": {
+        "url": "https://downloader.cursor.sh/builds/240814y9rhzmu7h/linux/appImage/x64",
+        "checksum": "zv609wwd8lrmv22ccqvr"
+      }
+    }
+  },
+  "0.39.4": {
+    "platforms": {
+      "windows": {
+        "url": "https://downloader.cursor.sh/builds/240810elmeg3seq/windows/nsis/x64",
+        "checksum": "cyfcds3geetie1nc4rsi"
+      },
+      "mac": {
+        "url": "https://downloader.cursor.sh/builds/240810elmeg3seq/mac/installer/universal",
+        "checksum": "vv44v0obhwose16cxome"
+      },
+      "mac_arm64": {
+        "url": "https://downloader.cursor.sh/builds/240810elmeg3seq/mac/installer/arm64",
+        "checksum": "ekq3hjyjnq8813pj9gun"
+      },
+      "mac_intel": {
+        "url": "https://downloader.cursor.sh/builds/240810elmeg3seq/mac/installer/x64",
+        "checksum": "vqt03cip8jtuo3fjsds7"
+      },
+      "linux": {
+        "url": "https://downloader.cursor.sh/builds/240810elmeg3seq/linux/appImage/x64",
+        "checksum": "eqg2l8m9k28pssqmo1ub"
+      }
+    }
+  },
+  "0.39.3": {
+    "platforms": {
+      "windows": {
+        "url": "https://downloader.cursor.sh/builds/2408092hoyaxt9m/windows/nsis/x64",
+        "checksum": "5t78y0qalw8u13raiknd"
+      },
+      "mac": {
+        "url": "https://downloader.cursor.sh/builds/2408092hoyaxt9m/mac/installer/universal",
+        "checksum": "31g7m0our4b59t2at2sz"
+      },
+      "mac_arm64": {
+        "url": "https://downloader.cursor.sh/builds/2408092hoyaxt9m/mac/installer/arm64",
+        "checksum": "47rnkvwqrydrbygjnzae"
+      },
+      "mac_intel": {
+        "url": "https://downloader.cursor.sh/builds/2408092hoyaxt9m/mac/installer/x64",
+        "checksum": "ibm15ukzuw2ynhf37a1n"
+      },
+      "linux": {
+        "url": "https://downloader.cursor.sh/builds/2408092hoyaxt9m/linux/appImage/x64",
+        "checksum": "cbomrsomma905hhk9ep7"
+      }
+    }
+  },
+  "0.39.2": {
+    "platforms": {
+      "windows": {
+        "url": "https://downloader.cursor.sh/builds/240808phaxh4b5r/windows/nsis/x64",
+        "checksum": "45f602tak29pudvt8gkz"
+      },
+      "mac": {
+        "url": "https://downloader.cursor.sh/builds/240808phaxh4b5r/mac/installer/universal",
+        "checksum": "gu8b3gjd2p15713ewb1y"
+      },
+      "mac_arm64": {
+        "url": "https://downloader.cursor.sh/builds/240808phaxh4b5r/mac/installer/arm64",
+        "checksum": "eh4pjgpntpv0l5ys7lah"
+      },
+      "mac_intel": {
+        "url": "https://downloader.cursor.sh/builds/240808phaxh4b5r/mac/installer/x64",
+        "checksum": "k3jf8sy1tctther5e7pk"
+      },
+      "linux": {
+        "url": "https://downloader.cursor.sh/builds/240808phaxh4b5r/linux/appImage/x64",
+        "checksum": "dfmzttzaahgrddrce8ob"
+      }
+    }
+  },
+  "0.39.1": {
+    "platforms": {
+      "windows": {
+        "url": "https://downloader.cursor.sh/builds/240807g919tr4ly/windows/nsis/x64",
+        "checksum": "2kz7jd058pgfqskhccoh"
+      },
+      "mac": {
+        "url": "https://downloader.cursor.sh/builds/240807g919tr4ly/mac/installer/universal",
+        "checksum": "9omj0zwlgz2za51ncmge"
+      },
+      "mac_arm64": {
+        "url": "https://downloader.cursor.sh/builds/240807g919tr4ly/mac/installer/arm64",
+        "checksum": "de9wazjz25speh7g08rt"
+      },
+      "mac_intel": {
+        "url": "https://downloader.cursor.sh/builds/240807g919tr4ly/mac/installer/x64",
+        "checksum": "6v2i3v8lgujkhu9chl7r"
+      },
+      "linux": {
+        "url": "https://downloader.cursor.sh/builds/240807g919tr4ly/linux/appImage/x64",
+        "checksum": "7fdk8y517bm5furzqsfe"
+      }
+    }
+  },
+  "0.39.0": {
+    "platforms": {
+      "windows": {
+        "url": "https://downloader.cursor.sh/builds/240802cdixtv9a6/windows/nsis/x64",
+        "checksum": "dpchyuwfu7zb8j9nwu24"
+      },
+      "mac": {
+        "url": "https://downloader.cursor.sh/builds/240802cdixtv9a6/mac/installer/universal",
+        "checksum": "aof7s5v2nlckehme2jfa"
+      },
+      "mac_arm64": {
+        "url": "https://downloader.cursor.sh/builds/240802cdixtv9a6/mac/installer/arm64",
+        "checksum": "7m4g6ob61v2pen1cau9d"
+      },
+      "mac_intel": {
+        "url": "https://downloader.cursor.sh/builds/240802cdixtv9a6/mac/installer/x64",
+        "checksum": "zk5cml6ionnw2ho94i4j"
+      },
+      "linux": {
+        "url": "https://downloader.cursor.sh/builds/240802cdixtv9a6/linux/appImage/x64",
+        "checksum": "hvff4jsd0e9eyao8y93w"
+      }
+    }
+  },
+  "0.38.1": {
+    "platforms": {
+      "windows": {
+        "url": "https://downloader.cursor.sh/builds/240725f0ti25os7/windows/nsis/x64",
+        "checksum": "zkzzm16tzcf15cnnxo1a"
+      },
+      "mac": {
+        "url": "https://downloader.cursor.sh/builds/240725f0ti25os7/mac/installer/universal",
+        "checksum": "gr5wi5b86ta7qqpn7yv6"
+      },
+      "mac_arm64": {
+        "url": "https://downloader.cursor.sh/builds/240725f0ti25os7/mac/installer/arm64",
+        "checksum": "y58ulikw2yj7pa7od1yc"
+      },
+      "mac_intel": {
+        "url": "https://downloader.cursor.sh/builds/240725f0ti25os7/mac/installer/x64",
+        "checksum": "y71yqtj1knn1osclo360"
+      },
+      "linux": {
+        "url": "https://downloader.cursor.sh/builds/240725f0ti25os7/linux/appImage/x64",
+        "checksum": "lwjgixsvbruvo5lyl2zc"
+      }
+    }
+  },
+  "0.38.0": {
+    "platforms": {
+      "windows": {
+        "url": "https://downloader.cursor.sh/builds/240723790oxe4a2/windows/nsis/x64",
+        "checksum": "sfsdv1ne8waj14iqscht"
+      },
+      "mac": {
+        "url": "https://downloader.cursor.sh/builds/240723790oxe4a2/mac/installer/universal",
+        "checksum": "gbcsv8mmdkhpt140w4o6"
+      },
+      "mac_arm64": {
+        "url": "https://downloader.cursor.sh/builds/240723790oxe4a2/mac/installer/arm64",
+        "checksum": "72z2tq9bg9bgvd3qzvhh"
+      },
+      "mac_intel": {
+        "url": "https://downloader.cursor.sh/builds/240723790oxe4a2/mac/installer/x64",
+        "checksum": "nztzhcrb3efkvbr40aw1"
+      },
+      "linux": {
+        "url": "https://downloader.cursor.sh/builds/240723790oxe4a2/linux/appImage/x64",
+        "checksum": "otihejifu5n87d9ukyl4"
+      }
+    }
+  },
+  "0.37.1": {
+    "platforms": {
+      "windows": {
+        "url": "https://downloader.cursor.sh/builds/240714yrr3gmv3k/windows/nsis/x64",
+        "checksum": "tow98gd9thmvwvly9l95"
+      },
+      "mac": {
+        "url": "https://downloader.cursor.sh/builds/240714yrr3gmv3k/mac/installer/universal",
+        "checksum": "435gk63cbpsvqj7bak09"
+      },
+      "mac_arm64": {
+        "url": "https://downloader.cursor.sh/builds/240714yrr3gmv3k/mac/installer/arm64",
+        "checksum": "8z1ktwmhllgyup7fait2"
+      },
+      "mac_intel": {
+        "url": "https://downloader.cursor.sh/builds/240714yrr3gmv3k/mac/installer/x64",
+        "checksum": "2umdv5jolrxzkuf4hpi8"
+      },
+      "linux": {
+        "url": "https://downloader.cursor.sh/builds/240714yrr3gmv3k/linux/appImage/x64",
+        "checksum": "3eyws92vm3pjpw6mgsq9"
+      }
+    }
+  },
+  "0.36.2": {
+    "platforms": {
+      "windows": {
+        "url": "https://downloader.cursor.sh/builds/2407077n6pzboby/windows/nsis/x64",
+        "checksum": "oav8kkn2ocy1howdjsby"
+      },
+      "mac": {
+        "url": "https://downloader.cursor.sh/builds/2407077n6pzboby/mac/installer/universal",
+        "checksum": "h8woxqctmzd4p04jyabj"
+      },
+      "mac_arm64": {
+        "url": "https://downloader.cursor.sh/builds/2407077n6pzboby/mac/installer/arm64",
+        "checksum": "ednebim91shkd9hrbz1d"
+      },
+      "mac_intel": {
+        "url": "https://downloader.cursor.sh/builds/2407077n6pzboby/mac/installer/x64",
+        "checksum": "dn7cnjrszw2hapl443bh"
+      },
+      "linux": {
+        "url": "https://downloader.cursor.sh/builds/2407077n6pzboby/linux/appImage/x64",
+        "checksum": "ge2rl1k6wx2rjwl7ym8g"
+      }
+    }
+  }
+}
