@@ -1,4 +1,4 @@
-name: Update Cursor Versions (EN)
+name: Update Cursor Versions (JA)
 
 on:
   schedule:
@@ -12,8 +12,8 @@ permissions:
   contents: write
 
 jobs:
-  fetch-cursor-version-en:
-    name: Update Cursor Versions (EN)
+  fetch-cursor-version-ja:
+    name: Update Cursor Versions (JA)
     runs-on: ubuntu-latest
 
     steps:
@@ -27,19 +27,19 @@ jobs:
         with:
           node-version: "18"
           cache: "npm"
-          cache-dependency-path: "./en/package-lock.json"
+          cache-dependency-path: "./ja/package-lock.json"
 
       - name: 安装依赖
         run: npm install
-        working-directory: ./en
+        working-directory: ./ja
 
       - name: 运行更新脚本
         run: npm run update-cursor-versions
-        working-directory: ./en
+        working-directory: ./ja
 
       - name: Commit and push if changed
         run: |
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
-          git add en/
-          git diff --staged --quiet || (git commit -m "Update Cursor versions (EN) - $(date)" && git push)
+          git add ja/
+          git diff --staged --quiet || (git commit -m "Update Cursor versions (JA) - $(date)" && git push)
