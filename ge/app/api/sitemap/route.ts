@@ -17,7 +17,7 @@ export async function GET() {
 		const versions = await getAllVersions()
 		console.log(`获取到 ${versions.length} 个版本`)
 
-		const domain = 'https://cursorhistory.com'
+		const domain = 'https://ge.cursorhistory.com'
 
 		// 生成基础URL
 		let urlEntries = [
@@ -80,7 +80,7 @@ export async function GET() {
 			`<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://cn.cursorhistory.com/</loc>
+    <loc>https://ge.cursorhistory.com/</loc>
     <lastmod>${new Date().toISOString().split('T')[0]}</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>

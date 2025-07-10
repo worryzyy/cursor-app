@@ -1,5 +1,5 @@
-import Link from 'next/link'
 import { Version } from '@/lib/types'
+import Link from 'next/link'
 
 interface VersionsTableProps {
   versions: Version[]
@@ -13,19 +13,19 @@ export function VersionsTable({ versions }: VersionsTableProps) {
         <thead className="bg-gray-50">
           <tr>
             <th scope="col" className="px-6 py-3 text-left text-xs font-medium uppercase tracking-wider text-gray-500">
-              版本
+              Version
             </th>
             <th scope="col" className="px-6 py-3 text-left text-xs font-medium uppercase tracking-wider text-gray-500">
-              发布日期
+              Veröffentlichungsdatum
             </th>
             <th scope="col" className="px-6 py-3 text-left text-xs font-medium uppercase tracking-wider text-gray-500">
-              平台
+              Plattform
             </th>
             <th scope="col" className="px-6 py-3 text-left text-xs font-medium uppercase tracking-wider text-gray-500">
-              更新内容
+              Änderungen
             </th>
             <th scope="col" className="px-6 py-3 text-left text-xs font-medium uppercase tracking-wider text-gray-500">
-              操作
+              Aktionen
             </th>
           </tr>
         </thead>
@@ -42,7 +42,7 @@ export function VersionsTable({ versions }: VersionsTableProps) {
                 </Link>
                 {version.isLatest && (
                   <span className="ml-2 rounded-full bg-green-100 px-2 py-0.5 text-xs font-medium text-green-800">
-                    最新
+                    Neueste
                   </span>
                 )}
               </td>
@@ -66,7 +66,7 @@ export function VersionsTable({ versions }: VersionsTableProps) {
                   className="font-medium text-blue-600 hover:text-blue-800"
                   aria-label={`查看Cursor ${version.version}版本的详细信息`}
                 >
-                  查看详情
+                  Details anzeigen
                 </Link>
               </td>
             </tr>

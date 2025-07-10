@@ -2,6 +2,6 @@
 User-agent: *
 Allow: /
 
-# 站点地图位置（同时提供动态和静态版本）
-Sitemap: https://cn.cursorhistory.com/api/sitemap
-Sitemap: https://cn.cursorhistory.com/sitemap.xml 
+# Sitemaps
+Sitemap: https://ge.cursorhistory.com/api/sitemap
+Sitemap: https://ge.cursorhistory.com/sitemap.xml 

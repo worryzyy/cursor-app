@@ -1,7 +1,7 @@
-import Link from 'next/link'
-import { getLatestVersion } from '@/lib/versions'
 import { platformLabels } from '@/config/site'
 import { Platform } from '@/lib/types'
+import { getLatestVersion } from '@/lib/versions'
+import Link from 'next/link'
 
 export async function Hero() {
   const latestVersion = await getLatestVersion()
@@ -31,15 +31,15 @@ export async function Hero() {
     <section className="rounded-lg bg-gradient-to-r from-indigo-900 to-purple-900 px-6 py-12 text-white shadow-lg sm:px-12 sm:py-16">
       <div className="mx-auto max-w-6xl text-center">
         <h1 className="mb-4 text-4xl font-bold tracking-tight sm:text-5xl">
-          Cursor 历史版本下载
+          Cursor Historische Versionen Download
         </h1>
         <p className="mb-8 text-lg text-blue-100 sm:text-xl">
-          Cursor 是一款由 AI 驱动的代码编辑器，帮助开发者更快、更智能地编写代码。
-          在这里，您可以找到并下载 Cursor 的各个历史版本。
+          Cursor ist ein von KI angetriebener Code-Editor, der Entwicklern hilft, schneller und intelligenter zu programmieren.
+          Hier können Sie verschiedene historische Versionen von Cursor finden und herunterladen.
         </p>
         {latestVersion && (
           <div className="mb-6 text-center">
-            <p className="mb-2 text-xl font-semibold">最新版本：Cursor {latestVersion.version}</p>
+            <p className="mb-2 text-xl font-semibold">Neueste Version: Cursor {latestVersion.version}</p>
 
             <div className="mt-6 grid grid-cols-1 gap-6 md:grid-cols-3">
               {/* Windows 平台 */}
@@ -112,7 +112,7 @@ export async function Hero() {
           href="/versions"
           className="inline-flex items-center justify-center rounded-md border border-indigo-300 bg-transparent px-4 py-2 text-xm font-medium text-white shadow-sm transition-all duration-150 hover:bg-white/10 hover:shadow focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-1 focus:ring-offset-indigo-600"
         >
-          查看所有版本
+          Alle Versionen anzeigen
           <svg xmlns="http://www.w3.org/2000/svg" className="ml-1 h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
           </svg>

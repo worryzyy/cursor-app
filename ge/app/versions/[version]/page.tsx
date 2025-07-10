@@ -1,11 +1,11 @@
-import { Suspense } from 'react'
-import Link from 'next/link'
-import { notFound } from 'next/navigation'
-import { getVersionByNumber, getAllVersions } from '@/lib/versions'
 import { platformLabels } from '@/config/site'
 import { Platform, PlatformFile } from '@/lib/types'
-import { Skeleton } from '../../components/ui/skeleton'
+import { getAllVersions, getVersionByNumber } from '@/lib/versions'
 import { Metadata } from 'next'
+import Link from 'next/link'
+import { notFound } from 'next/navigation'
+import { Suspense } from 'react'
+import { Skeleton } from '../../components/ui/skeleton'
 
 import Image from 'next/image'
 
@@ -77,7 +77,7 @@ async function VersionDetail({ version }: { version: string }) {
                     {/* <h4 className="mb-2 font-medium text-gray-800">{label}</h4> */}
                     <div className="mb-3 space-y-2">
                       <div className="flex items-start">
-                        <span className="mr-2 text-sm font-medium text-gray-700">校验和:</span>
+                        <span className="mr-2 text-sm font-medium text-gray-700">Prüfsumme:</span>
                         <code className="break-all rounded bg-gray-100 px-2 py-1 text-xs text-gray-800">
                           {file.checksum}
                         </code>
@@ -91,7 +91,7 @@ async function VersionDetail({ version }: { version: string }) {
                       <svg xmlns="http://www.w3.org/2000/svg" className="mr-1 h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
                       </svg>
-                      下载
+                      Herunterladen
                     </a>
 
                   </div>
@@ -116,7 +116,7 @@ async function VersionDetail({ version }: { version: string }) {
                     <h4 className="mb-2 font-medium text-gray-800">{label.replace('macOS ', '')}</h4>
                     <div className="mb-3 space-y-2">
                       <div className="flex items-start">
-                        <span className="mr-2 text-sm font-medium text-gray-700">校验和:</span>
+                        <span className="mr-2 text-sm font-medium text-gray-700">Prüfsumme:</span>
                         <code className="break-all rounded bg-gray-100 px-2 py-1 text-xs text-gray-800">
                           {file.checksum}
                         </code>
@@ -131,7 +131,7 @@ async function VersionDetail({ version }: { version: string }) {
                       <svg xmlns="http://www.w3.org/2000/svg" className="mr-1 h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
                       </svg>
-                      下载
+                      Herunterladen
                     </a>
                   </div>
                 ))}
@@ -155,7 +155,7 @@ async function VersionDetail({ version }: { version: string }) {
                     <h4 className="mb-2 font-medium text-gray-800">{label.replace('Linux ', '')}</h4>
                     <div className="mb-3 space-y-2">
                       <div className="flex items-start">
-                        <span className="mr-2 text-sm font-medium text-gray-700">校验和:</span>
+                        <span className="mr-2 text-sm font-medium text-gray-700">Prüfsumme:</span>
                         <code className="break-all rounded bg-gray-100 px-2 py-1 text-xs text-gray-800">
                           {file.checksum}
                         </code>
@@ -169,7 +169,7 @@ async function VersionDetail({ version }: { version: string }) {
                       <svg xmlns="http://www.w3.org/2000/svg" className="mr-1 h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
                       </svg>
-                      下载
+                      Herunterladen
                     </a>
                   </div>
                 ))}
@@ -184,7 +184,7 @@ async function VersionDetail({ version }: { version: string }) {
           href="/versions"
           className="inline-flex items-center text-indigo-600 hover:text-purple-600"
         >
-          &larr; 返回所有版本
+          &larr; Zurück zu allen Versionen
         </Link>
       </div>
     </div>
@@ -197,18 +197,30 @@ export async function generateMetadata({ params }: { params: { version: string }
 
   if (!version) {
     return {
-      title: '版本不存在',
-      description: '请查看其他可用的Cursor版本',
+      title: 'Version nicht gefunden',
+      description: 'Bitte schauen Sie auf andere verfügbare Cursor-Versionen',
     }
   }
 
   return {
-    title: `Cursor ${version.version}${version.isLatest ? ' (最新版)' : ''}`,
-    description: `下载Cursor ${version.version} - 支持Windows、macOS和Linux平台的智能编程工具`,
-    keywords: ['Cursor', version.version, 'Cursor 历史版本下载', '编程工具', 'AI编辑器'],
-    alternates: {
-      canonical: `https://cn.cursorhistory.com/versions/${version.version}`,
+    title: `Cursor ${version.version}${version.isLatest ? ' (Neueste Version)' : ''}`,
+    description: `Laden Sie Cursor ${version.version} herunter - Unterstützt Windows, macOS und Linux-Plattformen für intelligente Programmierungstools`,
+    keywords: ['Cursor', version.version, 'Cursor-Historie herunterladen', 'Programmierungstools', 'AI-Editor'],
+    openGraph: {
+      title: `Cursor ${version.version} Herunterladen - Cursor Historische Versionen`,
+      description: `Laden Sie Cursor ${version.version} für Windows, macOS und Linux herunter. Verfügbar für alle Plattformen mit vollständigen Installationspaketen.`,
+      url: `https://ge.cursorhistory.com/versions/${version.version}`,
+      siteName: 'Cursor Historische Versionen Download',
+      images: [
+        {
+          url: '/images/cursor-og.png',
+          width: 1200,
+          height: 630,
+          alt: `Cursor ${version.version} Herunterladen`,
+        },
+      ],
     },
+    canonical: `https://ge.cursorhistory.com/versions/${version.version}`,
   }
 }
 
@@ -227,9 +239,9 @@ export default function VersionDetailPage({ params }: VersionDetailPageProps) {
     <main className="container mx-auto px-4 py-8">
       <div className="mb-8">
         <div className="bg-white p-6 rounded-lg shadow-md mb-6">
-          <h2 className="text-2xl font-bold mb-4">版本详情</h2>
+          <h2 className="text-2xl font-bold mb-4">Version Details</h2>
           <p>
-            本页提供有关 Cursor 版本 {version} 的详细信息。您可以在下面找到适用于各种操作系统和架构的下载链接。每个下载均包含适用于您系统的适当安装程序包。
+            Diese Seite bietet detaillierte Informationen zur Cursor-Version {version}. Sie können unter den folgenden Links für verschiedene Betriebssysteme und Architekturen herunterladen. Jede Download-Option enthält den für Ihr System geeigneten Installationspaket.
           </p>
         </div>
       </div>

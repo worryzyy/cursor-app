@@ -1,30 +1,38 @@
-import { Metadata } from 'next'
-import { Inter } from 'next/font/google'
-import './globals.css'
+import { Metadata } from 'next';
+import { Inter } from 'next/font/google';
 import Header from "./components/Header";
+import './globals.css';
 // import { FloatingAdsContainer } from './components/Advertisements'
 // import { AAdsAdvertisement } from './components/Advertisements'
+import Script from 'next/script';
 import { siteConfig } from "../config/site";
-import Script from 'next/script'
 
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
   title: {
-    default: 'Cursor 历史版本下载',
-    template: '%s | Cursor 历史版本下载'
+    default: 'Cursor Historische Versionen Download',
+    template: '%s | Cursor Historische Versionen Download'
   },
-  description: 'Cursor 历史版本下载，下载Cursor最新版本，一款基于AI的智能编程工具，支持Windows、macOS和Linux平台',
-  keywords: ['Cursor', 'Cursor 历史版本下载', '编程工具', 'AI编程', '代码编辑器', '开发工具'],
+  description: 'Cursor Historische Versionen Download, laden Sie die neueste Cursor-Version herunter, ein KI-basiertes intelligentes Programmiertool, das Windows-, macOS- und Linux-Plattformen unterstützt',
+  keywords: ['Cursor', 'Cursor Historische Versionen Download', 'Programmierungstools', 'AI-Programmierung', 'Code-Editor', 'Entwicklungstools'],
   authors: [{ name: 'Cursor' }],
   creator: 'Cursor',
   publisher: 'Cursor',
   openGraph: {
-    title: 'Cursor  历史版本下载',
-    description: '下载Cursor最新版本，一款基于AI的智能编程工具，支持Windows、macOS和Linux平台',
-    url: 'https://cursorhistory.com',
-    siteName: 'Cursor 历史版本下载',
-    locale: 'zh_CN',
+    title: 'Cursor Historische Versionen Download',
+    description: 'Offizielle deutsche Seite für Cursor historische Versionen Download. Laden Sie einfach alle Versionen der Cursor IDE herunter.',
+    url: 'https://ge.cursorhistory.com',
+    siteName: 'Cursor Historische Versionen Download',
+    images: [
+      {
+        url: '/images/cursor-og.png',
+        width: 1200,
+        height: 630,
+        alt: 'Cursor Historische Versionen Download',
+      },
+    ],
+    locale: 'de_DE',
     type: 'website',
   },
   robots: {
@@ -32,7 +40,7 @@ export const metadata: Metadata = {
     follow: true,
   },
   alternates: {
-    canonical: 'https://cursorhistory.com',
+    canonical: 'https://ge.cursorhistory.com',
   },
   twitter: {
     card: "summary_large_image",
@@ -52,7 +60,7 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="zh-CN">
+    <html lang="de-DE">
       <head>
         {/* Google AdSense 验证元标签 */}
         <meta name="google-adsense-account" content="ca-pub-4633597437741439" />
@@ -99,8 +107,8 @@ export default function RootLayout({
                     <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"></path>
                   </svg>
                 </div>
-                <h3 className="text-sm font-bold text-gray-800 mb-1">广告位招租</h3>
-                <p className="text-xs text-blue-600 font-medium">黄金位置</p>
+                <h3 className="text-sm font-bold text-gray-800 mb-1">Werbeplatz zu vermieten</h3>
+                <p className="text-xs text-blue-600 font-medium">Premium-Position</p>
               </div>
               <div className="mb-4">
                 <a
@@ -111,7 +119,7 @@ export default function RootLayout({
                 </a>
               </div>
               <p className="text-xs text-gray-600 leading-tight font-medium">
-                商务合作·广告投放
+                Geschäftskooperation · Werbeschaltung
               </p>
             </div>
           </div>
