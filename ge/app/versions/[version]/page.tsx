@@ -220,7 +220,9 @@ export async function generateMetadata({ params }: { params: { version: string }
         },
       ],
     },
-    canonical: `https://ge.cursorhistory.com/versions/${version.version}`,
+    alternates: {
+      canonical: `https://ge.cursorhistory.com/versions/${version.version}`,
+    },
   }
 }
 
