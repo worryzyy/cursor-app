@@ -1,0 +1,152 @@
+name: Deploy to VPS
+
+on:
+  push:
+    branches: [ main ]
+    paths:
+      - 'en/**'
+      - 'cn/**'
+      - 'es/**'
+      - 'ge/**'
+      - 'ja/**'
+  workflow_dispatch:
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - uses: actions/checkout@v3
+    
+    - name: Setup Node.js
+      uses: actions/setup-node@v3
+      with:
+        node-version: '20'
+        
+    - name: Build all projects
+      run: |
+        # Build English version
+        if [ -d "en" ]; then
+          echo "Building EN version..."
+          cd en
+          npm ci
+          npm run build
+          cd ..
+        fi
+        
+        # Build Chinese version
+        if [ -d "cn" ]; then
+          echo "Building CN version..."
+          cd cn
+          npm ci
+          npm run build
+          cd ..
+        fi
+        
+        # Build Spanish version
+        if [ -d "es" ]; then
+          echo "Building ES version..."
+          cd es
+          npm ci
+          npm run build
+          cd ..
+        fi
+        
+        # Build German version
+        if [ -d "ge" ]; then
+          echo "Building GE version..."
+          cd ge
+          npm ci
+          npm run build
+          cd ..
+        fi
+        
+        # Build Japanese version
+        if [ -d "ja" ]; then
+          echo "Building JA version..."
+          cd ja
+          npm ci
+          npm run build
+          cd ..
+        fi
+    
+    - name: Package for deployment
+      run: |
+        # Create deployment package
+        mkdir -p deploy_package
+        
+        # Copy built projects (excluding node_modules to save space)
+        for lang in en cn es ge ja; do
+          if [ -d "$lang" ]; then
+            echo "Packaging $lang..."
+            tar -czf deploy_package/${lang}.tar.gz \
+              --exclude='node_modules' \
+              --exclude='.git' \
+              $lang/
+          fi
+        done
+        
+        # Copy deployment configs
+        cp nginx-simple.conf ecosystem.config.js deploy_package/ 2>/dev/null || true
+        
+        # Create final package
+        tar -czf deployment.tar.gz deploy_package/
+        
+    - name: Deploy to VPS
+      uses: appleboy/scp-action@v0.1.5
+      with:
+        host: ${{ secrets.VPS_HOST }}
+        username: ${{ secrets.VPS_USER }}
+        key: ${{ secrets.VPS_SSH_KEY }}
+        port: ${{ secrets.VPS_PORT }}
+        source: "deployment.tar.gz"
+        target: "/tmp/"
+    
+    - name: Execute deployment on VPS
+      uses: appleboy/ssh-action@v1.0.0
+      with:
+        host: ${{ secrets.VPS_HOST }}
+        username: ${{ secrets.VPS_USER }}
+        key: ${{ secrets.VPS_SSH_KEY }}
+        port: ${{ secrets.VPS_PORT }}
+        script: |
+          # Extract deployment package
+          cd /tmp
+          tar -xzf deployment.tar.gz
+          cd deploy_package
+          
+          # Stop PM2 processes
+          pm2 stop all || true
+          
+          # Deploy each language version
+          for lang in en cn es ge ja; do
+            if [ -f "${lang}.tar.gz" ]; then
+              echo "Deploying $lang..."
+              # Extract to web directory
+              sudo tar -xzf ${lang}.tar.gz -C /var/www/cursorhistory/
+              
+              # Install production dependencies only
+              cd /var/www/cursorhistory/${lang}
+              npm ci --only=production
+              cd -
+            fi
+          done
+          
+          # Copy nginx config if exists
+          if [ -f "nginx-simple.conf" ]; then
+            sudo cp nginx-simple.conf /etc/nginx/sites-available/cursorhistory
+            sudo nginx -t && sudo systemctl reload nginx
+          fi
+          
+          # Copy PM2 config and restart
+          if [ -f "ecosystem.config.js" ]; then
+            cp ecosystem.config.js /var/www/cursorhistory/
+            cd /var/www/cursorhistory
+            pm2 start ecosystem.config.js
+            pm2 save
+          fi
+          
+          # Cleanup
+          rm -rf /tmp/deployment.tar.gz /tmp/deploy_package
+          
+          echo "Deployment completed!"
