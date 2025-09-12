@@ -25,72 +25,47 @@ jobs:
         
     - name: Build all projects
       run: |
-        # Build English version
-        if [ -d "en" ]; then
-          echo "Building EN version..."
-          cd en
-          npm ci
-          npm run build
-          cd ..
-        fi
-        
-        # Build Chinese version
-        if [ -d "cn" ]; then
-          echo "Building CN version..."
-          cd cn
-          npm ci
-          npm run build
-          cd ..
-        fi
-        
-        # Build Spanish version
-        if [ -d "es" ]; then
-          echo "Building ES version..."
-          cd es
-          npm ci
-          npm run build
-          cd ..
-        fi
-        
-        # Build German version
-        if [ -d "ge" ]; then
-          echo "Building GE version..."
-          cd ge
-          npm ci
-          npm run build
-          cd ..
-        fi
-        
-        # Build Japanese version
-        if [ -d "ja" ]; then
-          echo "Building JA version..."
-          cd ja
-          npm ci
-          npm run build
-          cd ..
-        fi
-    
-    - name: Package for deployment
-      run: |
-        # Create deployment package
-        mkdir -p deploy_package
-        
-        # Copy built projects (excluding node_modules to save space)
         for lang in en cn es ge ja; do
           if [ -d "$lang" ]; then
-            echo "Packaging $lang..."
-            tar -czf deploy_package/${lang}.tar.gz \
-              --exclude='node_modules' \
-              --exclude='.git' \
-              $lang/
+            echo "Building $lang..."
+            cd $lang
+            npm ci
+            npm run build
+            cd ..
+          fi
+        done
+    
+    - name: Package production files only
+      run: |
+        mkdir -p deploy_package
+        
+        for lang in en cn es ge ja; do
+          if [ -d "$lang/.next" ]; then
+            echo "Packaging $lang production files..."
+            mkdir -p deploy_package/$lang
+            
+            # Copy only production files
+            cp -r $lang/.next deploy_package/$lang/
+            cp -r $lang/public deploy_package/$lang/ 2>/dev/null || true
+            cp $lang/package.json deploy_package/$lang/
+            cp $lang/package-lock.json deploy_package/$lang/ 2>/dev/null || true
+            cp $lang/next.config.* deploy_package/$lang/ 2>/dev/null || true
+            cp $lang/.env.production* deploy_package/$lang/ 2>/dev/null || true
+            
+            # Create tarball
+            cd deploy_package
+            tar -czf ${lang}.tar.gz $lang/
+            rm -rf $lang/
+            cd ..
           fi
         done
         
-        # Copy deployment configs
-        cp nginx-simple.conf ecosystem.config.js deploy_package/ 2>/dev/null || true
+        # Copy PM2 config only
+        cp ecosystem.config.js deploy_package/ 2>/dev/null || true
         
         # Create final package
         tar -czf deployment.tar.gz deploy_package/
+        echo "Deployment size: $(du -h deployment.tar.gz | cut -f1)"
         
     - name: Deploy to VPS
       uses: appleboy/scp-action@v0.1.5
@@ -110,7 +85,9 @@ jobs:
         key: ${{ secrets.VPS_SSH_KEY }}
         port: ${{ secrets.VPS_PORT }}
         script: |
-          # Extract deployment package
+          set -e
+          
+          # Extract deployment
           cd /tmp
           tar -xzf deployment.tar.gz
           cd deploy_package
@@ -118,35 +95,45 @@ jobs:
           # Stop PM2 processes
           pm2 stop all || true
           
-          # Deploy each language version
+          # Backup current deployment (optional)
+          if [ -d "/var/www/cursorhistory" ]; then
+            sudo mv /var/www/cursorhistory /var/www/cursorhistory.backup.$(date +%Y%m%d_%H%M%S)
+          fi
+          
+          # Create fresh directory
+          sudo mkdir -p /var/www/cursorhistory
+          
+          # Deploy each language
           for lang in en cn es ge ja; do
             if [ -f "${lang}.tar.gz" ]; then
               echo "Deploying $lang..."
-              # Extract to web directory
               sudo tar -xzf ${lang}.tar.gz -C /var/www/cursorhistory/
               
               # Install production dependencies only
               cd /var/www/cursorhistory/${lang}
-              npm ci --only=production
+              npm ci --only=production --omit=dev
               cd -
             fi
           done
           
-          # Copy nginx config if exists
-          if [ -f "nginx-simple.conf" ]; then
-            sudo cp nginx-simple.conf /etc/nginx/sites-available/cursorhistory
-            sudo nginx -t && sudo systemctl reload nginx
+          # Copy PM2 config only (don't modify nginx)
+          if [ -f "ecosystem.config.js" ]; then
+            sudo cp ecosystem.config.js /var/www/cursorhistory/
           fi
           
-          # Copy PM2 config and restart
-          if [ -f "ecosystem.config.js" ]; then
-            cp ecosystem.config.js /var/www/cursorhistory/
-            cd /var/www/cursorhistory
-            pm2 start ecosystem.config.js
-            pm2 save
-          fi
+          # Set permissions
+          sudo chown -R $USER:$USER /var/www/cursorhistory
+          
+          # Start services with PM2
+          cd /var/www/cursorhistory
+          pm2 start ecosystem.config.js
+          pm2 save
           
           # Cleanup
           rm -rf /tmp/deployment.tar.gz /tmp/deploy_package
           
-          echo "Deployment completed!"
+          # Remove old backups (keep last 3)
+          ls -dt /var/www/cursorhistory.backup.* 2>/dev/null | tail -n +4 | xargs rm -rf 2>/dev/null || true
+          
+          echo "✅ Deployment completed!"
+          pm2 status
