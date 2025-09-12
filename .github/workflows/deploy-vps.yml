@@ -104,8 +104,8 @@ jobs:
               npm i -g pm2 --silent || sudo npm i -g pm2 --silent || true
             fi
 
-            # Stop PM2 processes
-            pm2 stop all || true
+            # Track changed apps for selective reload later
+            changed_apps=""
 
             # Backup current deployment (optional)
             if [ -d "/var/www/cursorhistory" ]; then
@@ -125,6 +125,8 @@ jobs:
                 cd /var/www/cursorhistory/${lang}
                 npm ci --omit=dev
                 cd -
+                # Record app name for selective pm2 reload
+                changed_apps="${changed_apps},cursorhistory-${lang}"
               fi
             done
 
@@ -136,9 +138,14 @@ jobs:
             # Set permissions
             sudo chown -R $USER:$USER /var/www/cursorhistory
 
-            # Start services with PM2
+            # Start or reload only changed apps with PM2
             cd /var/www/cursorhistory
-            pm2 start ecosystem.config.js
+            apps_to_reload="${changed_apps#,}"
+            if [ -n "$apps_to_reload" ]; then
+              pm2 reload ecosystem.config.js --only "$apps_to_reload" || pm2 start ecosystem.config.js --only "$apps_to_reload"
+            else
+              echo "No apps changed. Skipping PM2 reload."
+            fi
             pm2 save
 
             # Cleanup
